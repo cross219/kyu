@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.voice {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.voice::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background: url(../images/common/voice-bg-1.png) no-repeat center center /
+      cover;
+    top: rem(-120);
+    left: rem(100);
+    max-width: rem(301);
+    width: 100%;
+    height: rem(138);
+    z-index: 20;
+  }
+}
+
+.voice::after {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background: url(../images/common/voice-bg-2.png) no-repeat center center /
+      cover;
+    bottom: rem(-60);
+    right: rem(180);
+    max-width: rem(71);
+    width: 100%;
+    height: rem(162);
+    z-index: 20;
+  }
+}
+
+.voice__inner {
+}
+
+.voice__title {
+}
+
+.voice__items {
+  margin-top: rem(51);
+  display: grid;
+  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  gap: rem(40);
+  @include mq(md) {
+    margin-top: rem(34);
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    // display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+  }
+}
+
+.voice-cards__item {
+  @include mq(md) {
+    max-width: rem(520);
+    width: 100%;
+  }
+}
+
+.voice__button {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

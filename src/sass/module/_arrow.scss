@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.arrow {
+  width: rem(48);
+  height: rem(48);
+  padding: rem(10);
+  border-radius: 50%;
+  border: 2px solid $accent;
+  cursor: pointer;
+  position: relative;
+  background: $white;
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.arrow__line01 {
+  background-color: $accent;
+  height: 1px;
+  width: 58.33333333%;
+  top: 50%;
+  position: absolute;
+  @include mq(md) {
+    width: 64.3%;
+  }
+}
+.arrow__line02 {
+  position: absolute;
+  top: 50%;
+  right: rem(10);
+  transform-origin: right bottom;
+  width: 10px;
+  height: 1px;
+  background-color: $accent;
+  transform: rotate(45deg);
+  @include mq(md) {
+    right: rem(17);
+  }
+}

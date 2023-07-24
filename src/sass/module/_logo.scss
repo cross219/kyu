@@ -1,0 +1,13 @@
+@use "global" as *;
+
+
+.logo__link {
+  transition: none;
+}
+
+.logo__link:hover {
+  @include mq(md) {
+      opacity: 1;
+  }
+}
+

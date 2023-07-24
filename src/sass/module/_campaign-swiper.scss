@@ -1,0 +1,64 @@
+@use "global" as *;
+
+
+
+
+
+.campaign__items.swiper {
+  margin-right: calc(50% - 47vw);
+  padding-bottom: rem(5);
+  @include mq(md) {
+  margin-right: calc(50% - 49vw);
+    
+  }
+}
+
+.campaign-swiper__button-next::after,
+.campaign-swiper__button-prev::after {
+  content: "";
+  text-rendering: initial;
+}
+
+// /* 前への矢印 */
+.campaign-swiper__button-prev {
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    right: 23.5%;
+  }
+}
+/* 次への矢印 */
+.campaign-swiper__button-next {
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    right: 12.5%;
+  }
+}
+
+
+/* 前への矢印カスタマイズ */
+.campaign-swiper__button-prev::after {
+  display: none;
+  @include mq(md) {
+    background: url(../images/common/arrow-left.png) no-repeat center center /
+      contain;
+    height: rem(80);
+    width: rem(80);
+    display: block;
+    content: "";
+  }
+}
+/* 次への矢印カスタマイズ */
+.campaign-swiper__button-next::after {
+  display: none;
+  @include mq(md) {
+    background: url(../images/common/arrow-right.png) no-repeat center center /
+      contain;
+    height: rem(80);
+    width: rem(80);
+    display: block;
+    content: "";
+    
+  }
+}

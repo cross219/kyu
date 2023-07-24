@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.price-table {
+
+}
+
+.price-table__heading {
+  text-align-last: left;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $accent;
+  font-weight: $bold;
+
+}
+
+.price-table__course {
+font-size: rem(14);
+padding: rem(5) 0;
+@include mq(md) {
+  font-size: rem(16);
+}
+
+}
+
+.price-table__price {
+text-align: right;
+font-size: rem(14);
+padding: rem(5) 0;
+@include mq(md) {
+  font-size: rem(16);
+}
+
+}
+

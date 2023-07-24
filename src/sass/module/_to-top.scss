@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.to-top {
+  position: fixed;
+  right: rem(19);
+  bottom: rem(40);
+  transform: rotate(-90deg);
+  z-index: 1000;
+  overflow: hidden;
+  @include mq(md) {
+    right: rem(30);
+    bottom: rem(31);
+  }
+}
+
+// .to-top a {
+//   display: block;
+//   width: rem(48);
+//   height: rem(48);
+//   background-color: #fff;
+//   border: 1px solid $accent;
+
+//   position: relative;
+//   border-radius: 50%;
+// }
+
+// .to-top a:hover {
+//   background-color: #333;
+//   color: #fff;
+// }
+
+// .to-top a span {
+//   position: absolute;
+//   background-color: transparent;
+//   width: rem(20);
+//   height: rem(20);
+//   border-top: 2px solid;
+//   border-right: 2px solid;
+//   top: 56%;
+//   left: 50%;
+//   transform: translate(-50%, calc(-50% + 0.25em)) rotate(-45deg);
+// }

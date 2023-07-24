@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.blog-cards__item {
+  max-width: rem(333);
+  width: 100%;
+}

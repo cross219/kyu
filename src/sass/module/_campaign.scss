@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.campaign {
+  position: relative;
+  @include mq(md) {
+  }
+}
+
+.campaign__inner {
+}
+
+.campaign__title {
+}
+
+.campaign__items {
+  margin-top: rem(30);
+  padding-bottom: rem(10);
+  @include mq(md) {
+    margin-top: rem(47);
+    
+    padding-bottom: rem(10);
+  }
+}
+
+.campaign__button {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(74);
+  }
+}
+
