@@ -1,0 +1,67 @@
+@use "global" as *;
+
+
+
+
+// .loader {
+//   position: fixed;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: #fff;
+//   z-index: 555;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .loader__title-box {
+//   position: absolute;
+//   top: 44.5%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   z-index: 100;
+//   display: none;
+//   @include mq(md) {
+//     top: 48%;
+    
+//   }
+// }
+
+// .loader__main-title {
+//   font-family: $third-font-family;
+//   font-size: rem(40);
+//   line-height: 1;
+//   color: $accent;
+//   text-align: center;
+//   text-transform: uppercase;
+//   letter-spacing: 0.52em;
+//   text-indent: 0.52em;
+//   font-weight: $normal;
+
+//   @include mq(md) {
+//     font-size: rem(80);
+//   }
+// }
+
+// .loader__sub-title {
+//   font-family: $second-font-family;
+//   margin-top: rem(12);
+//   font-weight: bold;
+//   font-size: rem(20);
+//   line-height: 1;
+//   // letter-spacing: 0.005em;
+//   color: $accent;
+//   text-align: center;
+//   font-weight: $normal;
+
+
+//   @include mq(md) {
+//     font-size: rem(20);
+//     margin-top: rem(17);
+//   }
+// }
+
+
+

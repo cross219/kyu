@@ -71,14 +71,12 @@ jQuery(function ($) {
       prevEl: ".campaign-swiper__button-prev",
     },
 
-
     breakpoints: {
       0: {
         slidesPerView: 1.25,
         spaceBetween: 24, // スライド間の距離
       },
       768: {
-        
         slidesPerView: 2.5,
         spaceBetween: 40, // スライド間の距離
       },
@@ -118,7 +116,6 @@ jQuery(function ($) {
     return false;
   });
 
-
   //ボタンの矢印 色変化
   $(function () {
     $(".js-button").hover(
@@ -130,4 +127,41 @@ jQuery(function ($) {
       }
     );
   });
+
+  
 });
+
+
+
+
+// //ローディングアニメーション
+// $(function () {
+//   // ローダー終了
+//   function end_loader() {
+//     $('.loader').fadeOut(800);
+//   }
+//   // テキスト表示
+//   function show_txt() {
+//     $('.loader__title-box').fadeIn(400);
+//   }
+//   // テキスト非表示
+//   function hide_txt() {
+//     $('.loader__title-box').fadeOut(400);
+//   }
+ 
+//   // タイマー処理
+//   $(window).on('load', function () {
+//     // 処理①
+//     setTimeout(function () {
+//       show_txt();
+//     }, 1000)
+//     // 処理②
+//     setTimeout(function () {
+//       hide_txt();
+//     }, 3500)
+//     // 処理③
+//     setTimeout(function () {
+//       end_loader();
+//     }, 4500)
+//   })
+// })
