@@ -13,6 +13,18 @@
   }
 }
 
+.campaign-swiper__button-box {
+  display: flex;
+  gap: 5rem;
+  position: absolute;
+  top: 0%;
+  left: 71%;
+}
+
+.campaign-swiper__button-next,
+.campaign-swiper__button-prev {
+  cursor: pointer;
+}
 .campaign-swiper__button-next::after,
 .campaign-swiper__button-prev::after {
   content: "";
@@ -22,17 +34,17 @@
 // /* 前への矢印 */
 .campaign-swiper__button-prev {
   @include mq(md) {
-    position: absolute;
-    top: 0;
-    right: 23.5%;
+    // position: absolute;
+    // top: 0;
+    // right: 23.5%;
   }
 }
 /* 次への矢印 */
 .campaign-swiper__button-next {
   @include mq(md) {
-    position: absolute;
-    top: 0;
-    right: 12.5%;
+    // position: absolute;
+    // top: 0;
+    // right: 12.5%;
   }
 }
 
