@@ -24,7 +24,6 @@
   margin-top: rem(15);
   @include mq(md) {
     margin-top: rem(17);
-    
   }
 }
 
@@ -46,4 +45,15 @@
 
 .blog-card__text {
   margin-top: rem(16);
+}
+
+.blog-card {
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.blog-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 1;
 }

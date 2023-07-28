@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .sp-nav {
   color: $white;
   display: none;
@@ -19,11 +18,14 @@
   }
 }
 
+.sp-nav__inner {
+}
+
 .sp-nav__items {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 
 }

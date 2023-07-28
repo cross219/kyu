@@ -41,11 +41,23 @@
   }
 }
 
+// /* ホバー */
+// a {
+//   text-decoration: none;
+//   color: inherit;
+//   cursor: pointer;
+// }
+
 /* ホバー */
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  transition: opacity 0.3s;
+  @include mq("md") {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 body {
