@@ -2,11 +2,13 @@
 
 .campaign {
   position: relative;
+  overflow: hidden;
   @include mq(md) {
   }
 }
 
 .campaign__inner {
+  margin-right: calc(50% - 50vw);
 }
 
 .campaign__title {
@@ -14,11 +16,19 @@
 
 .campaign__items {
   margin-top: rem(30);
+
   padding-bottom: rem(10);
   @include mq(md) {
     margin-top: rem(47);
-    
+
     padding-bottom: rem(10);
+  }
+}
+
+.campaign__items.swiper {
+  margin-right: calc(50% - 50vw);
+  padding-bottom: rem(5);
+  @include mq(md) {
   }
 }
 
@@ -30,4 +40,3 @@
     margin-top: rem(74);
   }
 }
-

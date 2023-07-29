@@ -54,9 +54,10 @@ jQuery(function ($) {
 
   var swiper = new Swiper(".campaign-swiper", {
     loop: true, // ループ
-    // loopAdditionalSlides: 5,
-    // slidesPerView: 4, // 一度に表示する枚数
     spaceBetween: 24, // スライド間の距離
+    slidesPerView: 1, // 一度に表示する枚数
+    loopAdditionalSlides: 2,
+    width:280,
     speed: 800, // ループの時間
     grabCursor: true,
     allowTouchMove: true, // スワイプ無効
@@ -72,17 +73,15 @@ jQuery(function ($) {
     },
 
     breakpoints: {
-      0: {
-        slidesPerView: 1.25,
-        spaceBetween: 24, // スライド間の距離
-      },
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 3.5,
         spaceBetween: 40, // スライド間の距離
+        width:1265.5,
       },
-      1300: {
-        slidesPerView: 3.45,
+      1920: {
+        slidesPerView: 5,
         spaceBetween: 40, // スライド間の距離
+        width:1825
       },
     },
   });
