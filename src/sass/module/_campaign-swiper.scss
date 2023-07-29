@@ -1,17 +1,14 @@
 @use "global" as *;
 
-
-
-
-
 .campaign__items.swiper {
-  margin-right: calc(50% - 47vw);
+  margin-right: calc(50% - 50vw);
   padding-bottom: rem(5);
   @include mq(md) {
-  margin-right: calc(50% - 49vw);
-    
+    margin-right: calc(50% - 50vw);
   }
 }
+
+
 
 .campaign-swiper__button-box {
   display: flex;
@@ -48,7 +45,6 @@
   }
 }
 
-
 /* 前への矢印カスタマイズ */
 .campaign-swiper__button-prev::after {
   display: none;
@@ -71,6 +67,5 @@
     width: rem(80);
     display: block;
     content: "";
-    
   }
 }
