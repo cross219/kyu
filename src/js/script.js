@@ -57,7 +57,7 @@ jQuery(function ($) {
     spaceBetween: 24, // スライド間の距離
     slidesPerView: 1, // 一度に表示する枚数
     loopAdditionalSlides: 2,
-    width:280,
+    width: 280,
     speed: 800, // ループの時間
     grabCursor: true,
     allowTouchMove: true, // スワイプ無効
@@ -76,12 +76,12 @@ jQuery(function ($) {
       768: {
         slidesPerView: 3.5,
         spaceBetween: 40, // スライド間の距離
-        width:1265.5,
+        width: 1265.5,
       },
       1920: {
         slidesPerView: 5,
         spaceBetween: 40, // スライド間の距離
-        width:1825
+        width: 1825,
       },
     },
   });
@@ -126,12 +126,7 @@ jQuery(function ($) {
       }
     );
   });
-
-  
 });
-
-
-
 
 // //ローディングアニメーション
 // $(function () {
@@ -147,7 +142,7 @@ jQuery(function ($) {
 //   function hide_txt() {
 //     $('.loader__title-box').fadeOut(400);
 //   }
- 
+
 //   // タイマー処理
 //   $(window).on('load', function () {
 //     // 処理①

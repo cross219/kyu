@@ -20,6 +20,7 @@
   align-items: center;
 }
 
+
 .button__arrow {
   position: absolute;
   top: rem(20);
@@ -64,6 +65,7 @@
 .button:hover {
   color: $accent;
   cursor: pointer;
+  opacity: 1;
 }
 .button:hover::after {
   transform: scale(1, 1);
