@@ -55,10 +55,10 @@ jQuery(function ($) {
   var swiper = new Swiper(".campaign-swiper", {
     loop: true, // ループ
     spaceBetween: 24, // スライド間の距離
-    slidesPerView: 1, // 一度に表示する枚数
+    slidesPerView: 1, // 一度に表示する枚数 
     loopAdditionalSlides: 2,
     width: 280,
-    speed: 800, // ループの時間
+    speed: 4000, // ループの時間
     grabCursor: true,
     allowTouchMove: true, // スワイプ無効
     centeredSlides: false, // アクティブなスライドを中央にする
