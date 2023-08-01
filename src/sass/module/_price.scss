@@ -43,7 +43,7 @@
 .price__container {
   margin-top: rem(40);
   @include mq(md) {
-    margin-top: rem(44);
+    margin-top: rem(48);
     display: flex;
     align-items: flex-start;
     gap: rem(93);
@@ -55,7 +55,6 @@
   flex-direction: column;
   gap: rem(33);
   @include mq(md) {
-    gap: rem(22);
     max-width: rem(492);
     width: 100%;
   }
@@ -81,8 +80,7 @@
 
 .price__button {
   margin-top: rem(37);
-  display: flex;
-  justify-content: center;
+  text-align: center;
   @include mq(md) {
     margin-top: rem(80);
   }

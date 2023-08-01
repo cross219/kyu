@@ -32,7 +32,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
   }
 }
 
@@ -44,6 +43,7 @@
 }
 
 .voice-card__category {
+  margin-left: auto;
   margin-top: rem(3);
   display: inline-block;
   color: $accent;

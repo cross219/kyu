@@ -46,25 +46,27 @@ jQuery(function ($) {
   // //swiper(fv)
   let swiper_works = new Swiper(".js-fv-swiper", {
     loop: true,
+    effect: "fade",
     clickable: true,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
     },
   });
 
   var swiper = new Swiper(".campaign-swiper", {
     loop: true, // ループ
     spaceBetween: 24, // スライド間の距離
-    slidesPerView: 1, // 一度に表示する枚数 
+    slidesPerView: 1, // 一度に表示する枚数
     loopAdditionalSlides: 2,
+    paginationClickable: true,
     width: 280,
-    speed: 4000, // ループの時間
+    speed: 1000, // ループの時間
     grabCursor: true,
     allowTouchMove: true, // スワイプ無効
     centeredSlides: false, // アクティブなスライドを中央にする
     autoplay: {
       //自動再生
-      delay: 4000, // 途切れなくループ
+      delay: 3000, // 途切れなくループ
       disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
     },
     navigation: {

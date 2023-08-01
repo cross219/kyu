@@ -19,6 +19,7 @@
   color: $accent;
 }
 
+
 .section-title__ja {
   color: $accent;
   font-family: $base-font-family;
@@ -35,6 +36,10 @@
   @include mq(md) {
     color: $white;
   }
+}
+
+.section-title__en--blog::first-letter {
+  color: $white;
 }
 
 .section-title__ja--white {

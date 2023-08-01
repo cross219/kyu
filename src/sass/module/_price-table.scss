@@ -1,6 +1,9 @@
 @use "global" as *;
 
 .price-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 }
 
@@ -9,6 +12,11 @@
   padding-bottom: rem(4);
   border-bottom: 1px solid $accent;
   font-weight: $bold;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(16);
+    padding-bottom: rem(3);
+  }
 
 }
 
@@ -17,6 +25,9 @@ font-size: rem(14);
 padding: rem(5) 0;
 @include mq(md) {
   font-size: rem(16);
+  padding: rem(5) 0;
+
+
 }
 
 }
@@ -27,6 +38,8 @@ font-size: rem(14);
 padding: rem(5) 0;
 @include mq(md) {
   font-size: rem(16);
+
+
 }
 
 }

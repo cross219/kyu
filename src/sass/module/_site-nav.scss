@@ -29,7 +29,9 @@
   }
 }
 
-
+.site-nav__item a {
+  display: block;
+}
 
 .site-nav__item--section {
   font-weight: $bold;
