@@ -14,7 +14,9 @@
     background: url(../images/common/price-bg.png) no-repeat center center /
       cover;
     bottom:rem(60);
-    left: rem(100);
+    // left: rem(100);
+    left: calc(50% - min(48vw, 622px));
+
     max-width: rem(437);
     width: 100%;
     height: rem(201);
@@ -53,10 +55,11 @@
 .price__contents {
   display: flex;
   flex-direction: column;
-  gap: rem(33);
+  gap: rem(40);
   @include mq(md) {
     max-width: rem(492);
     width: 100%;
+  gap: rem(30);
   }
 }
 

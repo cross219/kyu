@@ -4,11 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .price-table__heading {
-  text-align-last: left;
+  text-align: left;
   padding-bottom: rem(4);
   border-bottom: 1px solid $accent;
   font-weight: $bold;
@@ -17,30 +16,24 @@
     font-size: rem(16);
     padding-bottom: rem(3);
   }
-
 }
 
 .price-table__course {
-font-size: rem(14);
-padding: rem(5) 0;
-@include mq(md) {
-  font-size: rem(16);
-  padding: rem(5) 0;
-
-
-}
-
+  font-size: rem(14);
+  margin-top: rem(11);
+  flex-basis: calc(100% - rem(90));
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .price-table__price {
-text-align: right;
-font-size: rem(14);
-padding: rem(5) 0;
-@include mq(md) {
-  font-size: rem(16);
-
-
+  text-align: right;
+  margin-left: 0;
+  margin-top: rem(11);
+  flex-basis: rem(90); /*幅*/
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
-
-}
-

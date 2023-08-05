@@ -30,7 +30,8 @@
     background: url(../images/common/blog-bg.png) no-repeat center center /
       cover;
     top: rem(25);
-    left: rem(100);
+    // left: rem(100);
+    left: calc(50% - min(48vw, 622px));
     max-width: rem(437);
     width: 100%;
     height: rem(201);

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.drawer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(10);
+}
+
+.drawer-menu__item {
+  padding-left: rem(22);
+  padding-top: rem(9);
+  padding-bottom: rem(10);
+  font-size: rem(16);
+  font-weight: $normal;
+  position: relative;
+  @include mq(md) {
+    padding-left: rem(24);
+  }
+}
+
+.drawer-menu__item a {
+  display: block;
+}
+
+.drawer-menu__item--section {
+  font-weight: $bold;
+  margin-top: rem(14);
+}
+
+.drawer-menu__item--section::before {
+  position: absolute;
+  content: "";
+  width: rem(18);
+  height: rem(18);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url(../images/common/nav-icon.png) no-repeat center center / cover;
+}

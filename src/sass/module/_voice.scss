@@ -13,7 +13,9 @@
     background: url(../images/common/voice-bg-1.png) no-repeat center center /
       cover;
     top: rem(-120);
-    left: rem(100);
+    // left: rem(100);
+    left: calc(50% - min(48vw, 620px));
+
     max-width: rem(301);
     width: 100%;
     height: rem(138);
@@ -27,8 +29,9 @@
     content: "";
     background: url(../images/common/voice-bg-2.png) no-repeat center center /
       cover;
-    bottom: rem(-60);
-    right: rem(180);
+    bottom: rem(-70);
+    // right: rem(180);
+    right: calc(50% - min(48vw, 540px));
     max-width: rem(71);
     width: 100%;
     height: rem(162);

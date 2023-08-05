@@ -1,15 +1,11 @@
 @use "global" as *;
 
-
-
-
-
 .campaign-swiper__button-box {
   display: flex;
   gap: 5rem;
   position: absolute;
   top: 0%;
-  left: 71%;
+  right: calc(50% - min(48vw, 540px));
 }
 
 .campaign-swiper__button-next,
