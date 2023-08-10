@@ -102,9 +102,7 @@
   font-family: $third-font-family;
   font-size: rem(20);
   font-weight: $bold;
-  // letter-spacing: -0.1em;
   letter-spacing: 0.05em;
-  // margin-top: auto;
 
   @include mq(md) {
     font-size: rem(24);
@@ -123,7 +121,6 @@
   color: $accent;
   font-size: rem(32);
   font-weight: $bold;
-  // letter-spacing: -0.15em;
   letter-spacing: 0.02em;
 
   @include mq(md) {

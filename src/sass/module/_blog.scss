@@ -12,14 +12,12 @@
     background-image: url(../images/common/blog-bg_pc.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    // background-size: 100% rem(100);
     z-index: -1;
     height: rem(500);
     width: 100%;
     content: "";
     top: 0;
     left: 0;
-    // z-index: 100;
   }
 }
 
@@ -30,7 +28,6 @@
     background: url(../images/common/blog-bg.png) no-repeat center center /
       cover;
     top: rem(25);
-    // left: rem(100);
     left: calc(50% - min(48vw, 622px));
     max-width: rem(437);
     width: 100%;
@@ -48,7 +45,6 @@
 .blog__items {
   margin-top: rem(33);
   display: grid;
-  // grid-template-columns: 1fr;
   justify-content: center;
   gap: rem(40);
   @include mq(md) {

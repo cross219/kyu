@@ -12,8 +12,6 @@
   @include mq(md) {
     margin-top: rem(48);
     display: flex;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
   }

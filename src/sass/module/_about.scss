@@ -60,14 +60,10 @@
 }
 
 .about__img-right {
-  // position: absolute;
-  // top: 0;
-  // right: 0;
   margin-left: auto;
   width: 82.055556%;
   z-index: 10;
   @include mq(md) {
-    // width: 81.481481%;
     width: 81.481481%;
   }
 }
@@ -78,14 +74,11 @@
     position: absolute;
     top: 21%;
     left: 18.5%;
-    // transform: translateY(-50%);
     z-index: 12;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: rem(840);
-    // width: 81.481481%;
-    // margin-left: auto;
     margin-top: initial;
   }
 }
@@ -96,7 +89,6 @@
   font-size: rem(40);
   line-height: 1;
   @include mq(md) {
-    // max-width: rem(400);
     color: $white;
     font-size: rem(80);
     line-height: 1.25;
@@ -108,7 +100,6 @@
   @include mq(md) {
     margin-top: initial;
     color: $white;
-    // max-width: rem(400);
   }
 }
 

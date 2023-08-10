@@ -14,9 +14,7 @@
     background: url(../images/common/price-bg.png) no-repeat center center /
       cover;
     bottom:rem(60);
-    // left: rem(100);
     left: calc(50% - min(48vw, 622px));
-
     max-width: rem(437);
     width: 100%;
     height: rem(201);
@@ -30,7 +28,6 @@
 
 .price__sp-img {
   margin-top: rem(34);
-  // max-width: rem(345);
   width: 100%;
   aspect-ratio: 345 / 227;
   overflow: hidden;

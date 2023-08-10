@@ -21,17 +21,12 @@
 // /* 前への矢印 */
 .campaign-swiper__button-prev {
   @include mq(md) {
-    // position: absolute;
-    // top: 0;
-    // right: 23.5%;
   }
 }
 /* 次への矢印 */
 .campaign-swiper__button-next {
   @include mq(md) {
-    // position: absolute;
-    // top: 0;
-    // right: 12.5%;
+
   }
 }
 

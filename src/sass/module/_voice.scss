@@ -13,7 +13,6 @@
     background: url(../images/common/voice-bg-1.png) no-repeat center center /
       cover;
     top: rem(-120);
-    // left: rem(100);
     left: calc(50% - min(48vw, 620px));
 
     max-width: rem(301);
@@ -30,7 +29,6 @@
     background: url(../images/common/voice-bg-2.png) no-repeat center center /
       cover;
     bottom: rem(-70);
-    // right: rem(180);
     right: calc(50% - min(48vw, 540px));
     max-width: rem(71);
     width: 100%;
@@ -49,16 +47,12 @@
   margin-top: rem(51);
   display: grid;
   justify-content: center;
-  // display: flex;
-  // flex-direction: column;
   gap: rem(40);
   @include mq(md) {
     margin-top: rem(34);
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
-    // display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
   }
 }
 
