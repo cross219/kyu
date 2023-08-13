@@ -11,7 +11,7 @@
 .voice-card__upper {
   align-items: flex-end;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: rem(13);
   @include mq(md) {
     grid-template-columns: 1fr rem(180);

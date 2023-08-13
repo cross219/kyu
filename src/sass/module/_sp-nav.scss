@@ -19,13 +19,13 @@
 }
 
 .sp-nav__inner {
-  padding: rem(80) 0;
+  padding: rem(80) rem(15);
   height: calc(100vh - rem(80));
 }
 
 .sp-nav__items {
   display: grid;
-  place-items: center;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   height: calc(100vh - rem(160));
   width: 100%;
