@@ -53,7 +53,7 @@ jQuery(function ($) {
     },
   });
 
-  var swiper = new Swiper(".campaign-swiper", {
+  var swiper = new Swiper(".js-campaign-swiper", {
     loop: true, // ループ
     spaceBetween: 24, // スライド間の距離
     slidesPerView: "auto", // 一度に表示する枚数

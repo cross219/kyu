@@ -36,7 +36,7 @@
   <body>
     <header class="header js-header">
       <div class="header__inner">
-        <h1 class="logo header__logo">
+        <h1 class="header__logo logo">
           <a href="#" class="logo__link">
             <img src="./assets/images/common/logo.svg" alt="CodeUpsのロゴ" />
           </a>
@@ -49,51 +49,51 @@
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Campaign
-                <span class="pc-nav__item--ja">キャンペーン</span>
+                <span class="pc-nav__ja">キャンペーン</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >About us
                 <span class="pc-nav__item--ja">私たちについて</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Information
-                <span class="pc-nav__item--ja">ダイビング情報</span>
+                <span class="pc-nav__ja">ダイビング情報</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Blog
-                <span class="pc-nav__item--ja">ブログ</span>
+                <span class="pc-nav__ja">ブログ</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Voice
-                <span class="pc-nav__item--ja">お客様の声</span>
+                <span class="pc-nav__ja">お客様の声</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Price
-                <span class="pc-nav__item--ja">料金一覧</span>
+                <span class="pc-nav__ja">料金一覧</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >FAQ
-                <span class="pc-nav__item--ja">よくある質問</span>
+                <span class="pc-nav__ja">よくある質問</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__item--en"
+              <a href="#" class="pc-nav__en"
                 >Contact
-                <span class="pc-nav__item--ja">お問い合わせ</span>
+                <span class="pc-nav__ja">お問い合わせ</span>
               </a>
             </li>
           </ul>
@@ -202,17 +202,14 @@
           </div>
         </div>
       </section>
-
       <section class="campaign top-campaign">
         <div class="campaign__inner inner">
           <div class="campaign__title section-title">
             <h2 class="section-title__en">Campaign</h2>
             <p class="section-title__ja">キャンペーン</p>
           </div>
-
-
-            <div class="campaign__items price-cards swiper campaign-swiper">
-              <div class="swiper-wrapper">
+            <div class="campaign__items price-cards swiper js-campaign-swiper">
+              <div class="swiper-wrapper price-cards__items">
                 <div class="swiper-slide price-cards__item">
                   <div class="price-card">
                     <div class="price-card__img">
@@ -227,7 +224,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥56,000</span>
-  
                         </div>
                         <div class="price-card__discount">¥46,000</div>
                       </div>
@@ -249,7 +245,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥24,000</span>
-
                         </div>
                         <div class="price-card__discount">¥18,000</div>
                       </div>
@@ -291,7 +286,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥20,000</span>
-  
                         </div>
                         <div class="price-card__discount">¥16,000</div>
                       </div>
@@ -312,7 +306,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥56,000</span>
-  
                         </div>
                         <div class="price-card__discount">¥46,000</div>
                       </div>
@@ -334,7 +327,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥24,000</span>
-
                         </div>
                         <div class="price-card__discount">¥18,000</div>
                       </div>
@@ -376,7 +368,6 @@
                       <div class="price-card__price-box">
                         <div class="price-card__price">
                           <span class="price-card__price--redline">¥20,000</span>
-  
                         </div>
                         <div class="price-card__discount">¥16,000</div>
                       </div>
@@ -389,8 +380,6 @@
               <div class="campaign-swiper__button-prev"></div>
               <div class="campaign-swiper__button-next"></div>
             </div>
-
-
           <div class="campaign__button">
             <a href="#" class="button">View more<span class="button__arrow"></span></a>
           </div>
@@ -457,7 +446,7 @@
       <section class="blog top-blog">
         <div class="blog__inner inner">
           <div class="blog__title section-title">
-            <h2 class="section-title__en section-title__en--white section-title__en--blog">Blog</h2>
+            <h2 class="section-title__en section-title__en--white">Blog</h2>
             <p class="section-title__ja section-title__ja--white">ブログ</p>
           </div>
           <div class="blog__items blog-cards">
@@ -596,9 +585,9 @@
           </div>
           <div class="price__container">
             <div class="price__contents">
-              <div class="price__content">
+              <div class="price__content price-table">
                 <h3 class="price-table__heading">ライセンス講習</h3>
-                <dl class="price-table">
+                <dl class="price-table__content">
                     <dt class="price-table__course">オープンウォーターダイバーコース</dt>
                     <dd class="price-table__price">¥50,000</dd>
                     <dt class="price-table__course">アドバンスドオープンウォーターコース</dt>
@@ -607,9 +596,9 @@
                     <dd class="price-table__price">¥70,000</dd>
                 </dl>
               </div>
-              <div class="price__content">
+              <div class="price__content price-table">
                 <h3 class="price-table__heading">体験ダイビング</h3>
-                <dl class="price-table">
+                <dl class="price-table__content">
                     <dt class="price-table__course">ビーチ体験ダイビング(半日)</dt>
                     <dd class="price-table__price">¥7,000</dd>
                     <dt class="price-table__course">ビーチ体験ダイビング(1日)</dt>
@@ -620,9 +609,9 @@
                     <dd class="price-table__price">¥18,000</dd>
                 </dl>
               </div>
-              <div class="price__content">
+              <div class="price__content price-table">
                 <h3 class="price-table__heading">ファンダイビング</h3>
-                <dl class="price-table">
+                <dl class="price-table__content">
                     <dt class="price-table__course">ビーチダイビング(2ダイブ)</dt>
                     <dd class="price-table__price">¥14,000</dd>
                     <dt class="price-table__course">ボートダイビング(2ダイブ)</dt>
@@ -633,9 +622,9 @@
                     <dd class="price-table__price">¥10,000</dd>
                 </dl>
               </div>
-              <div class="price__content">
+              <div class="price__content price-table">
                 <h3 class="price-table__heading">スペシャルダイビング</h3>
-                <dl class="price-table">
+                <dl class="price-table__content">
                     <dt class="price-table__course">貸切ダイビング(2ダイブ)</dt>
                     <dd class="price-table__price">¥24,000</dd>
                     <dt class="price-table__course">1日ダイビング(3ダイブ)</dt>
@@ -695,7 +684,7 @@
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
               <div class="contact__button">
-                <a href="#" class="button js-button">Contact us<div class="button__arrow"></div></a>
+                <a href="#" class="button">Contact us<div class="button__arrow"></div></a>
               </div>
             </div>
           </div>
@@ -761,15 +750,12 @@
           </div>
           <div class="site-nav__items">
             <ul>
-              <li class="site-nav__item site-nav__item--section">
-                <a href="#">お客様の声</a>
-              </li>
-              <li class="site-nav__item site-nav__item--section">
-                <a href="#">料金一覧</a>
+              <li class="site-nav__item site-nav__item--section"><a href="#">お客様の声</a></li>
+              <li class="site-nav__item site-nav__item--section"><a href="#">料金一覧</a></li>
                 <li class="site-nav__item"><a href="#">ライセンス講習</a></li>
                 <li class="site-nav__item"><a href="#">体験ダイビング</a></li>
                 <li class="site-nav__item"><a href="#">ファンダイビング</a></li>
-              </li>
+              
             </ul>
             <ul>
               <li class="site-nav__item site-nav__item--section">
@@ -785,7 +771,6 @@
                 <a href="#">お問い合わせ</a>
               </li>
             </ul>
-
           </div>
         </nav>
         <div class="footer__copyright"

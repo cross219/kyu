@@ -63,12 +63,12 @@
   transform: scale(1, 1); /*X方向にスケール拡大*/
 }
 
-.pc-nav__item--en {
+.pc-nav__en {
   font-size: rem(18);
   font-family: $second-font-family;
 }
 
-.pc-nav__item--ja {
+.pc-nav__ja {
   font-family: $base-font-family;
   font-size: rem(10);
   white-space: nowrap;

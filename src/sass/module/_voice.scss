@@ -45,14 +45,8 @@
 
 .voice__items {
   margin-top: rem(51);
-  display: grid;
-  justify-content: center;
-  gap: rem(40);
   @include mq(md) {
     margin-top: rem(34);
-    justify-content: space-between;
-    grid-template-columns: repeat(2, 1fr);
-    flex-direction: row;
   }
 }
 

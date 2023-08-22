@@ -44,12 +44,8 @@
 
 .blog__items {
   margin-top: rem(33);
-  display: grid;
-  justify-content: center;
-  gap: rem(40);
   @include mq(md) {
     margin-top: rem(85);
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
