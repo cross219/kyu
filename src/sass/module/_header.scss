@@ -33,6 +33,7 @@
 }
 
 .header__logo {
+  z-index: 10000;
   max-width: rem(102);
   height: rem(38);
   @include mq(md) {
@@ -41,6 +42,10 @@
     height: rem(50);
     line-height: 1;
   }
+}
+
+.header__nav {
+
 }
 
 .header__drawer {
