@@ -117,3 +117,46 @@ jQuery(function ($) {
     return false;
   });
 });
+
+//以下のjsTab, jsTabCb, jQueryTabの関数のうち、1つのみコメントアウトを外して有効にして下さい
+//最初の書き方
+// jsTab();
+
+//コールバックを利用、アロー関数を使用、省略した書き方
+// jsTabCb();
+
+//jQuery
+jQueryTab();
+
+
+
+
+
+//jQueryでの書き方です
+function jQueryTab() {
+  //jQueryでの書き方です
+  const tabs = ".js-tab";
+  const contents = ".js-content";
+  const lists = ".js-list";
+  const activeClass = "is-active";
+
+  //リストアイテムの高さを揃える
+  // $(contents).css("display", "block");
+  // let height = 0;
+  // $(lists).each(function () {
+  //   if ($(this).height() > height) {
+  //     height = $(this).height();
+  //   }
+  // });
+  // $(contents).css("display", "");
+  // $(lists).css("height", height + "px");
+
+  //タブ切り替え
+  $(tabs).on("click", function () {
+    const i = $(this).index();
+    $(tabs).removeClass(activeClass);
+    $(contents).removeClass(activeClass);
+    $(this).addClass(activeClass);
+    $(contents).eq(i).addClass(activeClass);
+  });
+}

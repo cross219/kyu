@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.tab {
+}
+
+.tab__buttons {
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(21);
+  row-gap: rem(16);
+  justify-items: left;
+  @include mq(md) {
+    display: flex;
+    gap: rem(32);
+
+  }
+}
+
+.tab__button {
+  max-width: rem(162);
+  width: 100%;
+  border: 1px solid $accent;
+  display: inline-block;
+  text-align: center;
+  font-size: rem(14);
+  padding: rem(6) 0;
+  transition: opacity 0.3s;
+  color: $accent;
+  background-color: $white;
+}
+
+.tab__button:hover,
+.tab__button.is-active {
+  color: $white;
+  background: $accent;
+}
+
+.tab__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
+
+.tab__item {
+}
+
+.tab__wrapper {
+  display: none;
+}
+.tab__wrapper.is-active {
+  display: block;
+  animation: appear 0.9s ease;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

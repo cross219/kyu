@@ -10,10 +10,6 @@
   }
 }
 
-
-
-
-
 .price-card__img {
   aspect-ratio: 280 / 188;
   overflow: hidden;
@@ -61,6 +57,12 @@
   }
 }
 
+.price-card__heading--lower {
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
 .price-card__text {
   margin-top: rem(11);
   font-size: rem(14);
@@ -80,6 +82,11 @@
   @include mq(md) {
     padding-bottom: rem(35);
   }
+}
+
+.price-card__prices.price-card__prices--lower {
+  padding-bottom: rem(25);
+  margin: initial;
 }
 
 .price-card__price-box {
@@ -125,4 +132,42 @@
     font-size: rem(40);
     letter-spacing: 0.02em;
   }
+}
+
+.price-card__pc {
+  @include mq(md) {
+    padding: 0 rem(24) rem(43) rem(24);
+    margin-top: auto;
+  }
+}
+
+.u-desktop {
+}
+
+.price-card__description {
+}
+
+.price-card__link-items {
+  text-align: center;
+  margin-top: rem(28);
+}
+
+.price-card__period {
+  color: $accent;
+  font-size: rem(16);
+  font-family: $third-font-family;
+  font-weight: $bold;
+  letter-spacing: 0.02em;
+  text-indent: 0.02em;
+}
+
+.price-card__contact {
+  color: $accent;
+  font-size: rem(14);
+  margin-top: rem(5);
+}
+
+.price-card__button {
+  text-align: center;
+  margin-top: rem(10);
 }
