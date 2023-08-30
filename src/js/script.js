@@ -118,38 +118,12 @@ jQuery(function ($) {
   });
 });
 
-//以下のjsTab, jsTabCb, jQueryTabの関数のうち、1つのみコメントアウトを外して有効にして下さい
-//最初の書き方
-// jsTab();
-
-//コールバックを利用、アロー関数を使用、省略した書き方
-// jsTabCb();
-
-//jQuery
 jQueryTab();
-
-
-
-
-
-//jQueryでの書き方です
 function jQueryTab() {
-  //jQueryでの書き方です
   const tabs = ".js-tab";
   const contents = ".js-content";
   const lists = ".js-list";
   const activeClass = "is-active";
-
-  //リストアイテムの高さを揃える
-  // $(contents).css("display", "block");
-  // let height = 0;
-  // $(lists).each(function () {
-  //   if ($(this).height() > height) {
-  //     height = $(this).height();
-  //   }
-  // });
-  // $(contents).css("display", "");
-  // $(lists).css("height", height + "px");
 
   //タブ切り替え
   $(tabs).on("click", function () {
@@ -160,3 +134,33 @@ function jQueryTab() {
     $(contents).eq(i).addClass(activeClass);
   });
 }
+
+//モーダル
+$(function () {
+  // モーダルを表示する関数
+  function showModal(imageUrl) {
+    $(".gallery__modal-image").attr("src", imageUrl);
+    $(".gallery__modal").addClass("active");
+  }
+
+  // モーダルを非表示にする関数
+  function hideModal() {
+    $(".gallery__modal").removeClass("active");
+  }
+
+  // 画像をクリックしたらモーダルを表示
+  $(".gallery__item.js-modal").on("click", function () {
+    var imageUrl = $(this).find("img").attr("src");
+    showModal(imageUrl);
+  });
+
+  // モーダルをクリックして閉じる
+  $(".gallery__modal").on("click", function () {
+    hideModal();
+  });
+
+  // モーダル外の領域をクリックしたらモーダルを非表示にする
+  $(".gallery__modal-overlay").on("click", function () {
+    hideModal();
+  });
+});

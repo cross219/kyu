@@ -22,3 +22,10 @@
     height: rem(138);
   }
 }
+
+.lower-bg--about::before {
+  @include mq(md) {
+    top: rem(-150);
+  }
+}
+
