@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.lower-info {
+}
+
+.lower-info__title {
+}
+
+.lower-info__contents {
+  border: 1px solid $accent;
+  padding: rem(24);
+  @include mq(md) {
+    margin-top: rem(10);
+    padding: rem(20) rem(24);
+    display: flex;
+    gap: rem(48);
+    align-items: center;
+  }
+}
+
+.lower-info__img {
+  margin-top: rem(8);
+  aspect-ratio: 297 / 189;
+  overflow: hidden;
+  @include mq(md) {
+    margin-top: initial;
+    aspect-ratio: 492 / 313;
+    max-width: rem(492);
+    width: 100%;
+  }
+}
+
+.lower-info__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lower-info__content {
+  // margin-top: rem(28);
+  @include mq(md) {
+    margin-top: initial;
+    max-width: rem(492);
+    width: 100%;
+  }
+}
+
+.lower-info__heading {
+  padding-bottom: rem(6);
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: 1;
+  border-bottom: 1px solid $accent;
+  @include mq(md) {
+    font-size: rem(24);
+    font-weight: 500;
+  }
+}
+
+.lower-info__text {
+  margin-top: rem(8);
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(24 / 16);
+}

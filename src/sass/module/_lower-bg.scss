@@ -28,4 +28,9 @@
     top: rem(-150);
   }
 }
+.lower-bg--info::before {
+  top: rem(-95);
+  @include mq(md) {
+  }
+}
 

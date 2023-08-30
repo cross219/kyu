@@ -1,0 +1,93 @@
+@use "global" as *;
+
+.info-tab {
+}
+
+.info-tab__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(20);
+  row-gap: rem(16);
+  justify-items: left;
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(90);
+  }
+}
+
+.info-tab__button {
+  max-width: rem(102);
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: rem(10) rem(10);
+  transition: opacity 0.3s;
+  color: $accent;
+  background-color: $bg-color;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  @include mq(md) {
+    max-width: rem(300);
+    padding: rem(14) rem(30);
+    display: flex;
+    gap: rem(8);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.info-tab__button:hover,
+.info-tab__button.is-active {
+  color: $white;
+  background: $accent;
+}
+
+.info-tab__button:hover .info-tab__icon,
+.info-tab__button.is-active .info-tab__icon {
+  filter: brightness(298%) contrast(300%) saturate(0%);
+}
+
+.info-tab__icon {
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.info-tab__text {
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(24);
+    white-space: nowrap;
+  }
+}
+
+.info-tab__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq(md) {
+    grid-template-columns: 1fr;
+    gap: rem(80) rem(40);
+  }
+}
+
+.info-tab__item {
+}
+
+.info-tab__wrapper {
+  display: none;
+  margin-top: rem(14);
+}
+
+.info-tab__wrapper.is-active {
+  display: block;
+  animation: appear 0.9s ease;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
