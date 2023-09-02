@@ -17,6 +17,13 @@
     aspect-ratio: 333 / 223;
   }
 }
+.price-card__img--blog {
+  aspect-ratio: 294 / 188;
+@include mq(md) {
+  aspect-ratio: 294 / 188;
+  
+}
+}
 
 .price-card__img img {
   width: 100%;
@@ -29,6 +36,13 @@
   flex: 0 0 auto;
   @include mq(md) {
     padding: rem(24) rem(16) rem(2) rem(16);
+  }
+}
+
+.price-card__container--blog {
+  text-align: center;
+  @include mq(md) {
+    padding: rem(13) rem(16) rem(2) rem(16);
   }
 }
 
@@ -63,6 +77,8 @@
   }
 }
 
+
+
 .price-card__text {
   margin-top: rem(11);
   font-size: rem(14);
@@ -70,6 +86,12 @@
   @include mq(md) {
     font-size: rem(16);
     margin-top: rem(17);
+  }
+}
+.price-card__text--blog {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(10);
   }
 }
 
@@ -89,6 +111,13 @@
   margin: initial;
 }
 
+.price-card__prices--blog {
+  padding-bottom: 20px;
+  @include mq(md) {
+    padding-bottom: rem(20);
+  }
+}
+
 .price-card__price-box {
   display: flex;
   justify-content: center;
@@ -103,6 +132,13 @@
   }
 }
 
+.price-card__price-box--blog {
+  gap: rem(16);
+  @include mq(md) {
+    gap: rem(16);
+  }
+}
+
 .price-card__price {
   font-family: $third-font-family;
   font-size: rem(20);
@@ -112,6 +148,12 @@
   @include mq(md) {
     font-size: rem(24);
     letter-spacing: 0.05em;
+  }
+}
+.price-card__price--blog {
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(20);
   }
 }
 
@@ -131,6 +173,12 @@
   @include mq(md) {
     font-size: rem(40);
     letter-spacing: 0.02em;
+  }
+}
+.price-card__discount--blog {
+  font-size: rem(32);
+  @include mq(md) {
+    font-size: rem(32);
   }
 }
 

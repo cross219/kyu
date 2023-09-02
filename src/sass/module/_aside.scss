@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.aside {
+  width: 78.4%;
+  margin: rem(80) auto 0;
+  @include mq(md) {
+    margin-top: initial;
+  }
+}
+
+.aside__items {
+  margin-top: rem(5);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.aside__item {
+}
+
+.aside__item:nth-child(n + 2) {
+  margin-top: rem(75);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.aside__article {
+}
+
+.aside__voice {
+}
+
+.aside__campaign {
+}
+
+.aside__archive {
+}
+
+.aside__archive {
+}

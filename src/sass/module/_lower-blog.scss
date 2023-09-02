@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.lower-blog {
+
+}
+
+
+
+
+
+
+.lower-blog__inner {
+
+}
+
+
+
+.lower-blog__contents {
+  @include mq(md) {
+    display: flex;
+    gap: 7.40740741%;
+  }
+}
+
+.lower-blog__content {
+  width: 100%;
+  @include mq(md) {
+    width: 67.88461538%;
+    
+  }
+
+}
+
+.lower-blog__aside  {
+  max-width: rem(294);
+  width: 100%;
+  // width: 27.22222222%;
+}

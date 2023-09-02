@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.aside-title {
+display: inline-flex;
+align-items: center;
+gap: rem(8);
+padding-left: rem(23);
+position: relative;
+}
+
+.aside-title::before {
+  position: absolute;
+  content: "";
+  width: rem(7);
+  height: rem(50);
+  background: $accent;
+  bottom: rem(1);
+  left: 0;
+}
+
+.aside-title__icon {
+  width: 100%;
+  max-width: rem(50);
+  height: rem(50);
+  display: block;
+  position: relative;
+}
+
+.aside-title__text {
+  font-size: rem(24);
+  line-height: 1;
+  font-weight: $normal;
+}

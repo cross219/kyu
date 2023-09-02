@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.aside-voice {
+}
+
+
+.aside-voice__items {
+  margin-top: rem(16);
+}
+
+.aside-voice__item {
+}
+
+.aside-voice__age {
+  margin-top: rem(16);
+  font-size: rem(12);
+  font-weight: 400;
+}
+
+.aside-voice__title {
+  // margin-top: rem(8);
+  font-size: rem(24);
+  font-weight: 500;
+}
+
+.aside-voice__button {
+  margin-top: rem(44);
+  text-align: center;
+}

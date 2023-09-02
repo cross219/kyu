@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.aside-campaign {
+}
+
+.aside-campaign__title {
+}
+
+.aside-campaign__items {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.aside-campaign__item {
+}
+.aside-campaign__button {
+  margin-top: rem(40);
+  text-align: center;
+}

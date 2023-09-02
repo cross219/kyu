@@ -91,7 +91,7 @@ jQuery(function ($) {
   //  ヘッダークラス名付与
   // let header = $(".header");
   // let headerHeight = $(".header").height();
-  let height = $(".fv").height();
+  let height = $(".fv ,.sub-mv").height();
 
   var topBtn = $(".to-top");
 

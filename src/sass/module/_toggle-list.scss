@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.toggle-list {
+  list-style: none;
+  cursor: pointer;
+}
+
+.toggle-list:nth-child(n + 2) {
+  margin-top: rem(6);
+}
+
+
+.toggle-list__summary {
+  list-style: none;
+  cursor: pointer;
+  padding-left: rem(32);
+  color: $accent;
+  font-size: rem(24);
+  font-weight: $normal;
+  display: block;
+  position: relative;
+}
+
+.toggle-list__summary::before {
+  position: absolute;
+  top: 47%;
+  left: rem(2);
+  transform: translateY(-50%);
+  background: url(../images/common/toggle.png) no-repeat center center / contain;
+  width: rem(24);
+  height: rem(24);
+  content: "";
+  margin-right: 20px;
+}
+
+.toggle-list[open] .toggle-list__summary::before {
+  transform: translateY(-40%) rotate(90deg);
+}
+
+
+.toggle-list__content {
+  display: block;
+  padding-left: rem(32);
+  margin-left: rem(24);
+  margin-top: rem(2);
+  color: $accent;
+  font-size: rem(24);
+  font-weight: $normal;
+  position: relative;
+}
+
+.toggle-list__content::before {
+  position: absolute;
+  top: 50%;
+  left: rem(2);
+  transform: translateY(-50%);
+  background: url(../images/common/toggle.png) no-repeat center center / contain;
+  width: rem(24);
+  height: rem(24);
+  content: "";
+  margin-right: 20px;
+}
