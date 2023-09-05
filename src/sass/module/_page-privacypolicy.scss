@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.page-privacypoliy {
+}
+
+.page-privacypoliy-layout {
+}
+
+.page-privacypolicy__inner {
+}
+
+.page-privacypolicy__body {
+}
+
+.page-privacypolicy__title {
+  font-size: rem(24);
+  font-weight: 500;
+}
+
+.page-privacypolicy__content {
+  font-size: rem(16);
+  line-height: 2;
+}
+
+.page-privacypolicy__block {
+  margin-top: rem(20);
+}
+
+.page-privacypolicy__lead {
+}
+
+.page-privacypolicy__list {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.page-privacypolicy__number {
+}
+
+.page-privacypolicy__text {
+  margin-top: rem(20);
+}
