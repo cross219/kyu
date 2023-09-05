@@ -5,6 +5,7 @@
   margin: rem(80) auto 0;
   @include mq(md) {
     margin-top: initial;
+    padding: 0;
   }
 }
 

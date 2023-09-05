@@ -32,5 +32,8 @@
 }
 
 .lower-blog__aside  {
+  @include mq(md) {
+    width: 28%;;
+  }
 
 }

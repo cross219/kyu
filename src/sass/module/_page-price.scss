@@ -1,0 +1,98 @@
+@use "global" as *;
+
+.page-price__list {
+  @include mq(md) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.page-price__heading {
+  background-color: $accent;
+  color: $white;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  padding: rem(7) 0;
+  text-align: center;
+  @include mq(md) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 28.57142%;
+  }
+}
+
+.page-price__heading span {
+  padding-left: rem(32);
+  position: relative;
+  @include mq(md) {
+    padding-bottom: rem(72);
+    padding-left: 0;
+  }
+}
+.page-price__heading span::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/lower-price-icon.png) no-repeat center center /
+    cover;
+  width: rem(24);
+  height: rem(24);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  @include mq(md) {
+    height: rem(64);
+    width: rem(64);
+    bottom: 0;
+    left: 52%;
+    top: auto;
+    transform: translate(-50%, 0);
+  }
+}
+
+.page-price__content {
+  display: grid;
+  grid-auto-rows: rem(60);
+  grid-template-columns: 1fr 0.30724638fr;
+  @include mq(md) {
+    grid-template-columns: 1fr 0.47647fr;
+    width: 71.42858%;
+  }
+}
+
+.page-price__course,
+.page-price__price {
+  align-items: center;
+  display: flex;
+  font-size: rem(16);
+  height: 100%;
+  line-height: 1.5;
+  padding: 0 rem(15);
+  width: 100%;
+}
+
+.page-price__course {
+  border-bottom: 1px solid $accent;
+  border-left: 1px solid $accent;
+  justify-content: center;
+  text-align: center;
+  @include mq(md) {
+    justify-content: start;
+  }
+}
+
+.page-price__course:first-of-type,
+.page-price__price:first-of-type {
+  border-top: 1px solid $accent;
+}
+
+.page-price__price {
+  border-bottom: 1px solid $accent;
+  border-left: 1px solid $accent;
+  border-right: 1px solid $accent;
+  justify-content: end;
+
+  @include mq(md) {
+  }
+}

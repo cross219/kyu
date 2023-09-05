@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="icon" href="#" />
+    <!-- google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/jquery.inview.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <header class="header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo logo">
+          <a href="#" class="logo__link">
+            <img src="./assets/images/common/logo.svg" alt="CodeUpsのロゴ" />
+          </a>
+        </h1>
+        <button class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="header__pc-nav pc-nav">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Campaign
+                <span class="pc-nav__ja">キャンペーン</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >About us
+                <span class="pc-nav__ja">私たちについて</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Information
+                <span class="pc-nav__ja">ダイビング情報</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Blog
+                <span class="pc-nav__ja">ブログ</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Voice
+                <span class="pc-nav__ja">お客様の声</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Price
+                <span class="pc-nav__ja">料金一覧</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >FAQ
+                <span class="pc-nav__ja">よくある質問</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__en"
+                >Contact
+                <span class="pc-nav__ja">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="header__nav sp-nav js-drawer-menu">
+      <div class="sp-nav__inner inner">
+        <nav class="sp-nav__items drawer-menu js-drawer-menu">
+          <ul class="drawer-menu__items">
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">キャンペーン</a>
+            </li>
+            <li class="drawer-menu__item"><a href="#">ライセンス取得</a></li>
+            <li class="drawer-menu__item">
+              <a href="#">貸切体験ダイビング</a>
+            </li>
+            <li class="drawer-menu__item"><a href="#">ナイトダイビング</a></li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">私たちについて</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">ダイビング情報</a>
+            </li>
+            <li class="drawer-menu__item"><a href="#">ライセンス講習</a></li>
+            <li class="drawer-menu__item"><a href="#">体験ダイビング</a></li>
+            <li class="drawer-menu__item"><a href="#">ファンダイビング</a></li>
+            <li class="drawer-menu__item site-nav__item--section">
+              <a href="#">ブログ</a>
+            </li>
+          </ul>
+
+          <ul class="drawer-menu__items">
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">お客様の声</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">料金一覧</a>
+            </li>
+            <li class="drawer-menu__item"><a href="#">ライセンス講習</a></li>
+            <li class="drawer-menu__item"><a href="#">体験ダイビング</a></li>
+            <li class="drawer-menu__item"><a href="#">ファンダイビング</a></li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">よくある質問</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#"
+                >プライバシー<br class="u-mobile" />
+                ポリシー</a
+              >
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">利用規約</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--section">
+              <a href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- 下層ページのメインビュー -->
+    <div class="sub-mv">
+      <picture class="sub-mv__img">
+        <source
+          srcset="./assets/images/common/voice-sub-mv_sp.jpg"
+          media="(max-width: 768px)"
+        />
+        <img
+          src="./assets/images/common/voice-sub-mv_pc.jpg"
+          alt="黄色い熱帯魚2匹の写真"
+        />
+      </picture>
+      <div class="sub-mv__title-box">
+        <h2 class="sub-mv__title">Voice</h2>
+      </div>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumb">
+      <div class="inner">
+        <div>TOP > お客様の声</div>
+      </div>
+    </div>
+
+    <main>
+      <section class="archive-voice lower-bg archive-voice-layout">
+        <div class="archive-voice__inner inner">
+          <div class="archive-voice__tab tab">
+            <!-- タブ部分 -->
+            <div class="tab__buttons">
+              <button class="tab__button is-active js-tab">ALL</button>
+              <button class="tab__button js-tab">ライセンス講習</button>
+              <button class="tab__button js-tab">ファンダイビング</button>
+              <button class="tab__button js-tab">体験ダイビング</button>
+            </div>
+            <!-- 全てのコンテンツ -->
+            <div
+              class="tab__wrapper tab__wrapper--archive-voice is-active js-content"
+            >
+              <ul class="tab__items js-list">
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(女性)</div>
+                          <div class="voice-card__category">ライセンス講習</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-1.jpg"
+                          alt="女性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(男性)</div>
+                          <div class="voice-card__category">
+                            ファンダイビング
+                          </div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-2.jpg"
+                          alt="男性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(女性)</div>
+                          <div class="voice-card__category">体験ダイビング</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-3.jpg"
+                          alt="女性2人の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(女性)</div>
+                          <div class="voice-card__category">体験ダイビング</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-4.jpg"
+                          alt="女性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(カップル)</div>
+                          <div class="voice-card__category">
+                            ファンダイビング
+                          </div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-5.jpg"
+                          alt="カップルの写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(女性)</div>
+                          <div class="voice-card__category">ライセンス講習</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-6.jpg"
+                          alt="女の人の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--  ライセンス講習のコンテンツ -->
+            <div class="tab__wrapper tab__wrapper--archive-voice js-content">
+              <ul class="tab__items js-list">
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(女性)</div>
+                          <div class="voice-card__category">ライセンス講習</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-1.jpg"
+                          alt="女性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(女性)</div>
+                          <div class="voice-card__category">ライセンス講習</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-6.jpg"
+                          alt="女の人の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--  ファンダイビングのコンテンツ -->
+            <div
+              class="tab__wrapper tab__wrapper--campaign tab__wrapper--archive-voice js-content"
+            >
+              <ul class="tab__items js-list">
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">20代(男性)</div>
+                          <div class="voice-card__category">
+                            ファンダイビング
+                          </div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-2.jpg"
+                          alt="男性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(カップル)</div>
+                          <div class="voice-card__category">
+                            ファンダイビング
+                          </div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-5.jpg"
+                          alt="カップルの写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--  体験ダイビングのコンテンツ -->
+            <div class="tab__wrapper tab__wrapper--archive-voice js-content">
+              <ul class="tab__items js-list">
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(女性)</div>
+                          <div class="voice-card__category">体験ダイビング</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-3.jpg"
+                          alt="女性2人の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+                <li class="tab__item">
+                  <div class="voice-card">
+                    <div class="voice-card__upper">
+                      <div class="voice-card__title-box">
+                        <div class="voice-card__meta">
+                          <div class="voice-card__age">30代(女性)</div>
+                          <div class="voice-card__category">体験ダイビング</div>
+                        </div>
+                        <h3 class="voice-card__title">
+                          ここにタイトルが入ります。ここにタイトル
+                        </h3>
+                      </div>
+                      <div class="voice-card__img animate-img js-colorbox">
+                        <img
+                          src="./assets/images/common/voice-4.jpg"
+                          alt="女性の写真"
+                        />
+                      </div>
+                    </div>
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- page-navi-->
+            <div class="page-nav">
+              <div class="wp-pagenavi">
+                <a class="previouspostslink" rel="prev" href="#"></a>
+                <span class="current">1</span>
+                <a class="page smaller" href="#">2</a>
+                <a class="page smaller" href="#">3</a>
+                <a class="page smaller" href="#">4</a>
+                <a class="page smaller u-desktop" href="#">5</a>
+                <a class="page smaller u-desktop" href="#">6</a>
+                <a class="nextpostslink" rel="next" href="#"></a>
+              </div>
+            </div>
+            <!-- page-navi-->
+          </div>
+        </div>
+      </section>
+
+      <section class="contact lower-contact-layout">
+        <div class="contact__inner inner">
+          <div class="contact__wrapper">
+            <div class="contact__info-box">
+              <div class="contact__logo logo">
+                <a href="#" class="logo__link">
+                  <img
+                    src="./assets/images/common/logo-green.png"
+                    alt="CodeUpsのロゴ"
+                  />
+                </a>
+              </div>
+              <div class="contact__info">
+                <address class="contact__address">
+                  沖縄県那覇市1-1<br />
+                  TEL:0120-000-0000<br />
+                  営業時間:8:30-19:00<br />
+                  定休日:毎週火曜日<br />
+                </address>
+                <div class="contact__map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207447.05522075674!2d139.57572201316393!3d35.66813090635354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1689557777754!5m2!1sja!2sjp"
+                    width="320"
+                    height="397"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="contact__button-box">
+              <div class="contact__title section-title">
+                <h2 class="section-title__en section-title__en--large">
+                  Contact
+                </h2>
+                <p class="section-title__ja section-title__ja--large">
+                  お問い合わせ
+                </p>
+              </div>
+              <p class="contact__text">ご予約・お問い合わせはコチラ</p>
+              <div class="contact__button">
+                <a href="#" class="button"
+                  >Contact us
+                  <div class="button__arrow"></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="to-top">
+        <a href="#top">
+          <div class="to-top__arrow">
+            <span class="to-top__line01"></span>
+            <span class="to-top__line02"></span>
+          </div>
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <div class="footer__logos">
+          <div class="footer__logo logo">
+            <a href="#" class="logo__link">
+              <img src="./assets/images/common/logo.png" alt="CodeUpsのロゴ" />
+            </a>
+          </div>
+          <div class="footer__sns-items">
+            <a href="#" class="footer__sns-item"
+              ><img
+                src="./assets/images/common/facebook.svg"
+                alt="facebookのリンク"
+            /></a>
+            <a href="#" class="footer__sns-item"
+              ><img
+                src="./assets/images/common/instagram.svg"
+                alt="instagramのリンク"
+            /></a>
+          </div>
+        </div>
+        <nav class="footer__nav site-nav">
+          <div class="site-nav__items">
+            <ul>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">キャンペーン</a>
+              </li>
+              <li class="site-nav__item"><a href="#">ライセンス取得</a></li>
+              <li class="site-nav__item"><a href="#">貸切体験ダイビング</a></li>
+              <li class="site-nav__item"><a href="#">ナイトダイビング</a></li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">私たちについて</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">ダイビング情報</a>
+              </li>
+              <li class="site-nav__item"><a href="#">ライセンス講習</a></li>
+              <li class="site-nav__item"><a href="#">体験ダイビング</a></li>
+              <li class="site-nav__item"><a href="#">ファンダイビング</a></li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">ブログ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-nav__items">
+            <ul>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">お客様の声</a>
+              </li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">料金一覧</a>
+              </li>
+              <li class="site-nav__item"><a href="#">ライセンス講習</a></li>
+              <li class="site-nav__item"><a href="#">体験ダイビング</a></li>
+              <li class="site-nav__item"><a href="#">ファンダイビング</a></li>
+            </ul>
+            <ul>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">よくある質問</a>
+              </li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+              </li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">利用規約</a>
+              </li>
+              <li class="site-nav__item site-nav__item--section">
+                <a href="#">お問い合わせ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer__copyright">
+          Copyright &copy;2021 - 2023 CodeUps LLC. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
