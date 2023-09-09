@@ -6,7 +6,7 @@
   font-family: $second-font-family;
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: $white;
   white-space: nowrap;
   font-weight: $normal;
   max-width: rem(202);
@@ -20,6 +20,13 @@
   align-items: center;
 }
 
+.button--accent {
+  color: $accent;
+  background: $white;
+  border: 2px solid $white;
+  background-color: $white;
+}
+
 
 .button::before {
   position: absolute;
@@ -30,6 +37,11 @@
   border: 1px solid $accent;
   content: "";
   z-index: -1;
+}
+
+.button--accent::before {
+  border: 1px solid $white;
+
 }
 
 .button::after {
@@ -45,15 +57,26 @@
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
+
+.button--accent::after {
+  background: $accent;
+}
+
 .button:hover {
   color: $accent;
   cursor: pointer;
   opacity: 1;
 }
 
+.button--accent:hover {
+  color: $white;
+}
+
 .button:hover::after {
   transform: scale(1, 1);
 }
+
+
 
 .button__arrow {
   position: absolute;
@@ -65,8 +88,17 @@
   background: $white;
 }
 
+.button__arrow--accent {
+  background: $accent;
+
+}
+
 .button:hover .button__arrow {
   background: $accent;
+}
+
+.button--accent:hover .button__arrow--accent {
+  background: $white;
 }
 
 .button__arrow::after {

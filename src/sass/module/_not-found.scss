@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.not-found {
+  background: $accent;
+}
+
+.not-found-layout {
+}
+
+.not-found__inner {
+}
+
+.not-found__body {
+  text-align: center;
+  padding: rem(80) 0;
+  position: relative;
+  @include mq(md) {
+    padding-bottom: rem(148);
+  }
+}
+.not-found__body::after {
+  position: absolute;
+  background: url(../images/common/404.svg) no-repeat center center / contain;
+  content: "";
+  display: block;
+  max-width: rem(328);
+  width: 100%;
+  height: rem(293);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    max-width: rem(689);
+    width: 100%;
+    height: rem(689);
+  }
+}
+
+.not-found__title {
+  color: $white;
+  font-family: $third-font-family;
+  font-size: rem(80);
+  letter-spacing: rem(40);
+  @include mq(md) {
+    font-size: rem(160);
+  }
+}
+
+.not-found__text {
+  color: $white;
+  font-family: $third-font-family;
+  font-size: rem(16);
+  line-height: 1.5;
+}
+
+.not-found__button {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.button {
+}
+
+.button__arrow {
+}
