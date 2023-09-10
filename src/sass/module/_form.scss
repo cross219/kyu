@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.form {
+  letter-spacing: 0.05em;
+}
+.form__radio {
+  margin-top: rem(5);
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+  @include mq(md) {
+    display: block;
+    gap: 0;
+  }
+  /*wpカスタマイズ*/
+  .wpcf7-list-item {
+    display: block;
+    margin: 0;
+  }
+}
+.form dl:not(:first-child) {
+  margin-top: rem(30);
+}
+.form__item dt {
+  font-size: rem(15);
+  line-height: 2;
+  font-weight: 600;
+}
+.form__item dt span {
+  color: $white;
+  background: #c94800;
+  font-size: rem(12);
+  font-weight: $normal;
+  margin-left: rem(8);
+  padding: rem(2) rem(16);
+}
+.form__item dd {
+  max-width: rem(345);
+  width: 100%;
+  @include mq(md) {
+    margin-left: auto;
+  }
+}
+
+.form__item {
+  padding-bottom: rem(24);
+  border-bottom: 1px dotted $accent;
+  @include mq(md) {
+    padding-bottom: rem(40);
+    display: flex;
+  }
+  // .wpcf7-form-control-wrap {
+  //   display: block;
+  // }
+  // .wpcf7-text {
+  //   display: block;
+  // }
+}
+
+.form__radio--column {
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__btn {
+  margin-top: rem(50);
+  text-align: center;
+  // .wpcf7-submit {
+  //   text-align: center;
+  // }
+}
