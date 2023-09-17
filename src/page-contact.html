@@ -189,6 +189,9 @@
     <main>
       <section class="page-contact lower-bg page-contact-layout">
         <div class="page-contact__inner inner">
+          <div class="page-contact__error js-error">
+            <p>※必須項目が入力されていません。<br class="u-mobile">入力してください。</p>
+          </div>
           <div class="page-contact__content form">
             <form action="" method="post" id="">
               <dl class="form__item">
@@ -199,7 +202,7 @@
                     name="name"
                     placeholder="沖縄 太郎"
                     value=""
-                    required
+                    class="required"
                   />
                 </dd>
               </dl>
@@ -211,6 +214,7 @@
                     name="mail_address"
                     placeholder="aaa000@ggmail.com"
                     value=""
+                    class="required"
                   />
                 </dd>
               </dl>
@@ -225,6 +229,7 @@
                     name="mail_address"
                     placeholder="000-0000-0000"
                     value=""
+                    class="required"
                   />
                 </dd>
               </dl>
@@ -236,7 +241,9 @@
                       type="radio"
                       name="target"
                       value="ラジオボタン"
+                      id="name"
                       checked
+                      class="required"
                     /><span>ダイビング講習について</span></label
                   >
                   <label
@@ -273,7 +280,7 @@
               <dl class="form__item">
                 <dt>お問い合わせ内容 <span>必須</span></dt>
                 <dd>
-                  <textarea name="contents"></textarea>
+                  <textarea name="contents" class="required"></textarea>
                 </dd>
               </dl>
               <!-- <div class="form__checkbox">
@@ -300,7 +307,7 @@ class="u-mobail"
 
               <div class="form__btn">
                 <div class="button">
-                  <input type="button" value="Send" />
+                  <input type="submit" value="Send" />
                   <div class="button__arrow"></div>
                 </div>
               </div>

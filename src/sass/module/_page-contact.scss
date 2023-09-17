@@ -1,9 +1,7 @@
 @use "global" as *;
 
 .page-contact {
-
 }
-
 
 .page-contact__inner {
   max-width: rem(600);
@@ -13,9 +11,13 @@
   }
 }
 
-
-
 .page-contact__content {
-
 }
 
+.page-contact__error {
+  color: #c94800;
+  display: none;
+  font-size: 0.875rem;
+  margin-bottom: 2.375rem;
+  text-align: center;
+}
