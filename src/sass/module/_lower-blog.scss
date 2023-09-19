@@ -16,9 +16,11 @@
 
 
 .lower-blog__contents {
+  // padding: 0 rem(6);
   @include mq(md) {
     display: flex;
     gap: 7.40740741%;
+    // padding: 0;
   }
 }
 
@@ -28,7 +30,14 @@
     width: 67.88461538%;
     
   }
+}
 
+.lower-blog__items {
+  padding: 0 rem(6);
+@include mq(md) {
+  padding: 0;
+
+}
 }
 
 .lower-blog__aside  {

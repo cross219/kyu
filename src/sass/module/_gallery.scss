@@ -108,18 +108,21 @@
   display: block;
 }
 
-
-
-
-.gallery__modal-image {
+.gallery__modal img{
+  height: 75%;
   left: 50%;
-  margin: auto;
-  max-height: 80vh;
-  max-width: 80vw;
+  object-fit: contain;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-
+  @include mq(md) {
+    aspect-ratio: 920/586;
+    width: 90%;
+  }
 }
+
+
+
+
 

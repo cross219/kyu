@@ -97,7 +97,7 @@
 .lower-about__pc {
   margin-top: rem(16);
   @include mq(md) {
-    margin-top: initial;
+    margin-top: rem(50);
     color: $white;
   }
 }

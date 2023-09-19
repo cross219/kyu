@@ -4,7 +4,10 @@
 }
 
 .aside-voice__items {
-  margin-top: rem(16);
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(15);
+  }
 }
 
 .aside-voice__item {
@@ -17,12 +20,15 @@
 }
 
 .aside-voice__title {
-  // margin-top: rem(8);
+  margin-top: rem(7);
   font-size: rem(24);
   font-weight: 500;
 }
 
 .aside-voice__button {
-  margin-top: rem(44);
+  margin-top: rem(40);
   text-align: center;
+  @include mq(md) {
+    margin-top: rem(45);
+  }
 }

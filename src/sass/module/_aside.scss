@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .aside {
-  padding: 0 rem(20);
   margin: rem(80) auto 0;
+  padding: 0 rem(26);
   @include mq(md) {
     margin-top: initial;
     padding: 0;
