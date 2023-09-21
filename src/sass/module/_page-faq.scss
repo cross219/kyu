@@ -7,9 +7,15 @@
 }
 
 .page-faq__inner {
+
 }
 
 .page-faq__items {
+  @include mq(md) {
+    max-width: rem(700);
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .page-faq__item {

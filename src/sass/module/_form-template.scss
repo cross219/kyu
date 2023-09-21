@@ -1,4 +1,3 @@
-
 @use "global" as *;
 @use "sass:math";
 // remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
@@ -8,13 +7,13 @@
 /*デフォルト色の指定*/
 $border-cr-default: $accent; //デフォルト時のボーダーの色
 $border-cr: $accent; //inputのhover or focus時の色
-$back-cr: $white;//input（テキスト系）の背景色
+$back-cr: $white; //input（テキスト系）の背景色
 
 /*サイズ等の指定*/
-$fz: rem(16);//入力するときのfont-size
-$padding-und: rem(10);//paddingの指定（上下） inputの内側の余白で使う
-$padding-lnr: rem(10);//paddingの指定（左右） inputの内側の余白で使う
-$border-r: rem(0);//border-radius（テキスト系）
+$fz: rem(16); //入力するときのfont-size
+$padding-und: rem(7); //paddingの指定（上下） inputの内側の余白で使う
+$padding-lnr: rem(10); //paddingの指定（左右） inputの内側の余白で使う
+$border-r: rem(0); //border-radius（テキスト系）
 
 /*ボタン系の指定*/
 // $fz-btn: rem(14);//送信ボタンのfont-size
@@ -25,24 +24,24 @@ $border-r: rem(0);//border-radius（テキスト系）
 // $border-r-btn: rem(50);
 
 /*ラジオボタンの指定*/
-$radio-fz: rem(12);//フォントサイズ
-$radio-size: rem(12);//外枠の幅高さ
-$radio-bg-cr: #fff;//外枠の背景色
-$radio-border-cr: $accent;//外枠の色
-$radio-size-inner: rem(14);//チェックマーク幅高さ
+$radio-fz: rem(16); //フォントサイズ
+$radio-size: rem(14); //外枠の幅高さ
+$radio-bg-cr: #fff; //外枠の背景色
+$radio-border-cr: $accent; //外枠の色
+$radio-size-inner: rem(8); //チェックマーク幅高さ
 // $radio-bg-cr-inner: #391E88;//チェックマークの背景色
-$radio-space: rem(10);//チェックマークと文字の距離
-$radio-space-betweenRadio: rem(35);//ラジオボタンの間の距離
+$radio-space: rem(11); //チェックマークと文字の距離
+$radio-space-betweenRadio: rem(35); //ラジオボタンの間の距離
 
 /*チェックボックスの指定*/
-$check-fz: rem(14);//フォントサイズ
-$check-size: rem(22);//外枠の幅高さ
-$check-bg-cr: #fff;//外枠の背景色
-$check-border-cr: $accent;//外枠の色
-$check-bg-cr-inner: #f00;//チェックマークの背景色
-$check-space: rem(5);//チェックマークと文字の距離
-$check-space-betweenRadio: rem(20);//ラジオボタンの間の距離
-$check-weight: 4px;//チェックマークの線の太さ(px)
+$check-fz: rem(14); //フォントサイズ
+$check-size: rem(22); //外枠の幅高さ
+$check-bg-cr: #fff; //外枠の背景色
+$check-border-cr: $accent; //外枠の色
+$check-bg-cr-inner: #f00; //チェックマークの背景色
+$check-space: rem(10); //チェックマークと文字の距離
+$check-space-betweenRadio: rem(20); //ラジオボタンの間の距離
+$check-weight: 4px; //チェックマークの線の太さ(px)
 
 /*テキストエリアの指定*/
 $textarea-height: rem(200);
@@ -55,24 +54,25 @@ $textarea-height: rem(200);
 [type="password"],
 [type="date"],
 textarea {
-	/*↓リセットCSS */
-	border: none;
-	border-radius: 0;
-	background-image: none;
-	font-family: inherit;
-	/*↓カスタム */
-  margin-top: rem(10);
-	font-size: $fz;
-	padding: $padding-und $padding-lnr;
-	width: 100%;
+  /*↓リセットCSS */
+  border: none;
+  border-radius: 0;
+  background-image: none;
+  font-family: inherit;
+  /*↓カスタム */
+  margin-top: rem(13);
+  font-size: $fz;
+  padding: $padding-und $padding-lnr;
+  width: 100%;
   max-width: rem(345);
-	background: $back-cr;
-	border: 1px solid $border-cr-default;
-	border-radius: $border-r;
-@include mq(md) {
-	max-width: rem(480);
-	width: 100%;
-}
+  background: $back-cr;
+  border: 1px solid $border-cr-default;
+  border-radius: $border-r;
+  @include mq(md) {
+    max-width: rem(480);
+    width: 100%;
+    margin-top: initial;
+  }
 }
 
 [type="text"].error,
@@ -83,196 +83,215 @@ textarea {
 [type="password"].error,
 [type="date"].error,
 textarea.error {
-	    background: rgba(201, 72, 0, 0.2);
-    border: 0.0625rem solid #C94800;
+  background: rgba(201, 72, 0, 0.2);
+  border: 0.0625rem solid #c94800;
+  color: $white;
 }
 
 ::placeholder {
-	font-size: rem(16);
-	color: #DDF0F1;
+  font-size: rem(16);
+  color: #ddf0f1;
+}
+.error::placeholder {
+  color: $white;
 }
 
 button,
 [type="button"],
 [type="submit"] {
-	/*↓リセットCSS */
-	// margin: 0;
-	// background-image: none;
-	// width: auto;
-	// display: inline-block;
-	// text-decoration: none;
-	// border: none;
-	// border-radius: 0;
-	// /*↓カスタム */
-	// padding: $padding-und-btn $padding-lnr-btn;
-	// background: $back-cr-btn;
-	// color: $white;
-	// font-size: $fz-btn;
-	// cursor: pointer;
-	// transition: 0.3s ease;
+  /*↓リセットCSS */
+  // margin: 0;
+  // background-image: none;
+  // width: auto;
+  // display: inline-block;
+  // text-decoration: none;
+  // border: none;
+  // border-radius: 0;
+  // /*↓カスタム */
+  // padding: $padding-und-btn $padding-lnr-btn;
+  // background: $back-cr-btn;
+  // color: $white;
+  // font-size: $fz-btn;
+  // cursor: pointer;
+  // transition: 0.3s ease;
   // border-radius: $border-r-btn;
   // line-height: 1;
+  color: $white;
 }
 
-
+.button:hover [type="submit"] {
+  color: $accent;
+}
 
 [type="radio"] {
-	display: none;
+  display: none;
 
-	+ span {
-		display: inline-block;
-		position: relative;
-		padding: 0 0 0 calc($radio-size + $radio-space);
-		margin: 0 $radio-space-betweenRadio 0 0;
-		font-size: $radio-fz;
-		line-height: 1;
-		cursor: pointer;
+  + span {
+    display: inline-block;
+    position: relative;
+    // padding: 0 0 0 calc($radio-size + $radio-space);
+    letter-spacing: 0.01em;
+    padding-left: rem(22);
+    letter-spacing: 0.02em;
+    margin: 0 $radio-space-betweenRadio 0 0;
+    font-size: $radio-fz;
+    line-height: 1;
+    cursor: pointer;
 
-		&::before {
-			position: absolute;
-			content: "";
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			background: $radio-bg-cr;
-			border: 1px solid $radio-border-cr;
-			width: $radio-size;
-			height: $radio-size;
-			display: block;
-		}
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: rem(1);
+      transform: translateY(-50%);
+      background: $radio-bg-cr;
+      border: 1px solid $radio-border-cr;
+      width: $radio-size;
+      height: $radio-size;
+      display: block;
+    }
 
-		&::after {
-			opacity: 0;
-			transition: 0.3s ease;
-		}
-	}
+    &::after {
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
 
-	&:checked + span {
-		&::after {
-			position: absolute;
-			content: "";
-			top: 50%;
-			left: calc(($radio-size - $radio-size-inner) / 2);
-			transform: translateY(-50%);
-			background: url(../images/common/check.png) no-repeat center center / contain;
-			// border-radius: 50%;
-			width: rem(9);
-			height: rem(5);
-			display: block;
-			opacity: 1;
-		}
-	}
+  &:checked + span {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: calc(($radio-size - $radio-size-inner) / 2);
+      transform: translateY(-50%);
+      background: url(../images/common/check.png) no-repeat center center /
+        contain;
+      // border-radius: 50%;
+      width: rem(10);
+      height: rem(7);
+      display: block;
+      opacity: 1;
+    }
+  }
 }
 
 [type="checkbox"] {
-	display: none;
+  display: none;
 
-	+ span {
-		display: inline-block;
-		position: relative;
-		padding: 0 0 0 calc($check-size + $check-space);
-		margin: 0 $check-space-betweenRadio 0 0;
-		font-size: $check-fz;
-		line-height: 1;
-		cursor: pointer;
-		transition: 0.3s ease;
+  + span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 calc($check-size + $check-space);
+    margin: 0 0 0 calc($check-size + $check-space);
+    font-size: rem(14);
+    line-height: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: normal;
+    @include mq(md) {
+      margin-left: 0;
+    }
 
-		&::before {
-			position: absolute;
-			content: "";
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			background: $check-bg-cr;
-			border: 1px solid $check-border-cr;
-			width: $check-size;
-			height: $check-size;
-			display: block;
-		}
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      // transform: translateY(-50%);
+      background: $check-bg-cr;
+      border: 1px solid $check-border-cr;
+      width: $check-size;
+      height: $check-size;
+      display: block;
+    }
 
-		&::after {
-			opacity: 0;
-			transition: 0.3s ease;
-		}
-	}
+    &::after {
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
 
-	&:checked + span {
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			display: block;
-			opacity: 1;
-			/*チェックマークじゃない場合は以下を変更する*/
-			transform: translateY(-50%) rotate(-45deg);
-			width: calc($check-size * 0.9);
-			height: calc($check-size * 0.5);
-			margin-top: -0.1em;
-			margin-left: 0.1em;
-			border-left: $check-weight solid $check-bg-cr-inner;
-			border-bottom: $check-weight solid $check-bg-cr-inner;
-
-		}
-	}
+  &:checked + span {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 0;
+      display: block;
+      opacity: 1;
+      /*チェックマークじゃない場合は以下を変更する*/
+      transform: translateY(-50%) rotate(-45deg);
+      width: calc($check-size * 0.9);
+      height: calc($check-size * 0.5);
+      margin-top: -0.1em;
+      margin-left: 0.1em;
+      border-left: $check-weight solid $check-bg-cr-inner;
+      border-bottom: $check-weight solid $check-bg-cr-inner;
+      @include mq(md) {
+        top: 40%;
+      }
+    }
+  }
 }
 
-
-
 select {
-	/*↓リセットCSS */
-	border-radius: 0;
-	font-family: inherit;
-	color: inherit;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-	/*↓カスタム */
+  /*↓リセットCSS */
+  border-radius: 0;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /*↓カスタム */
   margin-top: rem(10);
-	font-size: $fz;
-	padding: $padding-und $padding-lnr;
-	background-color: $back-cr;
+  font-size: rem(12);
+  padding: rem(10) rem(7);
+  background-color: $back-cr;
   border: 1px solid $border-cr-default;
   border-radius: $border-r;
-	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
-	// appearance: auto;
-	/*↓デフォルトではないアイコンを使う場合は入力する*/
-	background-image: url(../images/common/toggle45deg.png);
-	background-position: right 12px center;
-	background-repeat: no-repeat;
-	background-size: rem(12);
-	&:focus {
-		border: 1px solid $border-cr;
-	}
+  /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+  // appearance: auto;
+  /*↓デフォルトではないアイコンを使う場合は入力する*/
+  background-image: url(../images/common/toggle45deg.png);
+  background-position: right 8px top 43%;
+  background-repeat: no-repeat;
+  background-size: rem(12);
+  @include mq(md) {
+    margin-top: initial;
+    padding: rem(5) rem(7);
+  }
+  &:focus {
+    border: 1px solid $border-cr;
+  }
 }
 
 [type="date"] {
-	position: relative;
-	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
-	appearance: auto;
-	/*↓デフォルトではないアイコンを使う場合は入力する*/
-	// background-image: url();
-	// background-position: right 12px center;
-	// background-repeat: no-repeat;
-	&:focus {
-		border-color: 1px solid $border-cr;
-	}
+  position: relative;
+  /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+  appearance: auto;
+  /*↓デフォルトではないアイコンを使う場合は入力する*/
+  // background-image: url();
+  // background-position: right 12px center;
+  // background-repeat: no-repeat;
+  &:focus {
+    border-color: 1px solid $border-cr;
+  }
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 textarea {
-	height: $textarea-height;
+  height: $textarea-height;
   width: 100%;
   max-width: rem(600);
+  resize: none;
 }
 
-
 .wpcf7-spinner {
-	display: none !important;
+  display: none !important;
 }

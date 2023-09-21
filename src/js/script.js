@@ -117,70 +117,169 @@ jQuery(function ($) {
     return false;
   });
 
+  const tabs = ".js-tab";
+  const contents = ".js-content";
+  const lists = ".js-list";
+  const activeClass = "is-active";
 
+  //タブ切り替え
+  $(tabs).on("click", function () {
+    const i = $(this).index();
+    $(tabs).removeClass(activeClass);
+    $(contents).removeClass(activeClass);
+    $(this).addClass(activeClass);
+    $(contents).eq(i).addClass(activeClass);
+  });
 
+  //モーダル
+  $(function () {
+    // モーダルを表示する関数
+    function showModal(imageUrl) {
+      $(".gallery__modal-image").attr("src", imageUrl);
+      $(".gallery__modal").addClass("active");
+    }
 
-    const tabs = ".js-tab";
-    const contents = ".js-content";
-    const lists = ".js-list";
-    const activeClass = "is-active";
-  
-    //タブ切り替え
-    $(tabs).on("click", function () {
-      const i = $(this).index();
-      $(tabs).removeClass(activeClass);
-      $(contents).removeClass(activeClass);
-      $(this).addClass(activeClass);
-      $(contents).eq(i).addClass(activeClass);
+    // モーダルを非表示にする関数
+    function hideModal() {
+      $(".gallery__modal").removeClass("active");
+    }
+
+    // 画像をクリックしたらモーダルを表示
+    $(".gallery__item.js-modal").on("click", function () {
+      var imageUrl = $(this).find("img").attr("src");
+      showModal(imageUrl);
     });
-});
 
+    // モーダルをクリックして閉じる
+    $(".gallery__modal").on("click", function () {
+      hideModal();
+    });
 
-
-//モーダル
-$(function () {
-  // モーダルを表示する関数
-  function showModal(imageUrl) {
-    $(".gallery__modal-image").attr("src", imageUrl);
-    $(".gallery__modal").addClass("active");
-  }
-
-  // モーダルを非表示にする関数
-  function hideModal() {
-    $(".gallery__modal").removeClass("active");
-  }
-
-  // 画像をクリックしたらモーダルを表示
-  $(".gallery__item.js-modal").on("click", function () {
-    var imageUrl = $(this).find("img").attr("src");
-    showModal(imageUrl);
+    // モーダル外の領域をクリックしたらモーダルを非表示にする
+    $(".gallery__modal-overlay").on("click", function () {
+      hideModal();
+    });
   });
 
-  // モーダルをクリックして閉じる
-  $(".gallery__modal").on("click", function () {
-    hideModal();
+  $(".js-faq").on("click", function () {
+    // クリックされたアコーディオン要素を取得
+    var clickedAccordion = $(this);
+
+    // クリックされたアコーディオン以外を閉じる
+    $(".js-faq").not(clickedAccordion).removeClass("close"); // 他のアコーディオンのcloseクラスを削除
+    // $(".faq__content").not(clickedAccordion.next(".faq__content")).slideUp(); // 他のアコーディオンを閉じる
+
+    // クリックされたアコーディオンを開閉する
+    clickedAccordion.find(".faq__icon").toggleClass("is-open");
+    var findElm = clickedAccordion.next(".faq__content");
+    findElm.slideToggle();
+
+    if (clickedAccordion.hasClass("close")) {
+      clickedAccordion.removeClass("close");
+    } else {
+      clickedAccordion.addClass("close");
+    }
   });
 
-  // モーダル外の領域をクリックしたらモーダルを非表示にする
-  $(".gallery__modal-overlay").on("click", function () {
-    hideModal();
+  // $(document).ready(function () {
+  //   // 必須項目の入力要素を取得
+  //   const requiredInputs = $(".required");
+
+  //   // エラーメッセージを表示する要素を取得
+  //   const errorElement = $(".js-error");
+
+  //   // 入力要素にフォーカスがあたったときの処理を設定
+  //   requiredInputs.on("blur", function () {
+  //     // 未入力の場合、.error クラスを追加
+  //     if ($(this).val().trim() === "") {
+  //       $(this).addClass("error");
+  //       errorElement.css("display", "block"); // エラーメッセージを表示
+
+  //     } else {
+  //       // 入力がある場合、.error クラスを削除
+  //       $(this).removeClass("error");
+  //       errorElement.css("display", "none"); // エラーメッセージを非表示
+
+  //     }
+  //   });
+  // });
+  $(document).ready(function () {
+    // 必須項目の入力要素を取得
+    const requiredInputs = $(".required");
+
+    // エラーメッセージを表示する要素を取得
+    const errorElement = $(".js-error");
+
+    // フォーム送信時の処理を設定
+    $("#form").on("submit", function (e) {
+      let hasError = false;
+
+      // 必須項目の入力が空かどうかをチェック
+      requiredInputs.each(function () {
+        if ($(this).val().trim() === "") {
+          $(this).addClass("error");
+          errorElement.css("display", "block");
+          hasError = true;
+        } else {
+          $(this).removeClass("error");
+        }
+      });
+
+      // エラーがある場合はフォーム送信をキャンセル
+      if (hasError) {
+        e.preventDefault();
+
+        // エラーがある場合、フォームの上部までスクロール
+        $("body,html").animate(
+          {
+            scrollTop: 0,
+          },
+          300,
+          "swing"
+        );
+      }
+    });
+
+    // 入力要素にフォーカスがあたったときの処理を設定
+    requiredInputs.on("blur", function () {
+      // 未入力の場合、.error クラスを追加
+      if ($(this).val().trim() === "") {
+        $(this).addClass("error");
+        errorElement.css("display", "block"); // エラーメッセージを表示
+      } else {
+        // 入力がある場合、.error クラスを削除
+        $(this).removeClass("error");
+        errorElement.css("display", "none"); // エラーメッセージを非表示
+      }
+    });
   });
 });
 
-//アコーディオンをクリックした時の動作
-$(".js-faq").on("click", function () {
-  //タイトル要素をクリックしたら
-  $(".faq__icon").toggleClass("is-open");
-  var findElm = $(this).next(".faq__content"); //直後のアコーディオンを行うエリアを取得し
-  $(findElm).slideToggle(); //アコーディオンの上下動作
+// document.addEventListener("DOMContentLoaded", function () {
+//   // 必須項目の入力要素を取得
+//   const requiredInputs = document.querySelectorAll(".required");
 
-  if ($(this).hasClass("close")) {
-    //タイトル要素にクラス名closeがあれば
-    $(this).removeClass("close"); //クラス名を除去し
-  } else {
-    //それ以外は
-    $(this).addClass("close"); //クラス名closeを付与
-  }
-});
+//   // エラーメッセージを表示する要素を取得
+//   const errorElement = document.querySelector(".js-error");
 
+//   // 入力要素にフォーカスがあたったときの処理を設定
+//   requiredInputs.forEach(function (input) {
+//     // input.addEventListener("focus", function () {
+//     //   // フォーカスがあたったとき、.required クラスを追加
+//     //   input.classList.add(".error");
+//     //   errorElement.style.display = "none"; // エラーメッセージを非表示
+//     // });
 
+//     input.addEventListener("blur", function () {
+//       // 未入力の場合、.required クラスを追加
+//       if (input.value.trim() === "") {
+//         input.classList.add("error");
+//         errorElement.style.display = "block"; // エラーメッセージを表示
+//       } else {
+//         // 入力がある場合、.required クラスを削除
+//         input.classList.remove("error");
+//         errorElement.style.display = "none"; // エラーメッセージを非表示
+//       }
+//     });
+//   });
+// });

@@ -14,15 +14,24 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-auto-flow: column;
-  gap: rem(10);
-@include mq(md) {
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: none;
-}
+  justify-items: center;
+  // gap: 0 rem(10);
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    gap: 13%;
+  }
 }
 
 .page-sitemap__items {
+  width: 100%;
+}
 
+.page-sitemap__items--right {
+  margin-left: rem(44);
+  @include mq(md) {
+    margin: initial;
+  }
 }
 
 .page-sitemap__item {
@@ -34,6 +43,7 @@
   position: relative;
   @include mq(md) {
     padding-left: rem(24);
+    white-space: nowrap;
   }
 }
 
@@ -43,7 +53,21 @@
 
 .page-sitemap__item--section {
   font-weight: $bold;
-  margin-top: rem(14);
+  // margin-top: rem(14);
+}
+
+.page-sitemap__item--margin-sp {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin: initial;
+  }
+}
+
+.page-sitemap__item--margin-pc {
+  margin: initial;
+  @include mq(md) {
+    margin-top: rem(15);
+  }
 }
 
 .page-sitemap__item--section::before {

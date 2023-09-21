@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .page-terms {
 }
 
@@ -7,9 +8,15 @@
 }
 
 .page-terms__inner {
+
 }
 
 .page-terms__body {
+  @include mq(md) {
+    max-width: rem(800);
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .page-terms__title {
@@ -23,11 +30,9 @@
 .page-terms__content {
   font-size: rem(16);
   line-height: 2;
+  margin-top: rem(40);
 }
 
-.page-terms__block {
-  margin-top: rem(20);
-}
 
 .page-terms__lead {
 }
@@ -35,12 +40,17 @@
 .page-terms__list {
   list-style-type: decimal;
   list-style-position: outside;
-  padding-left: 20px;
+  padding-left: rem(23);
+  margin-top: rem(30);
+}
+
+.page-terms__list--mt0 {
+  margin-top: 0;
 }
 
 .page-terms__number {
 }
 
 .page-terms__text {
-  margin-top: rem(20);
+  margin-top: rem(34);
 }

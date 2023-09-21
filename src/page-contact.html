@@ -213,7 +213,7 @@
             </p>
           </div>
           <div class="page-contact__content form">
-            <form action="" method="post" id="">
+            <form action="page-thanks.html" method="post" id="form">
               <dl class="form__item">
                 <dt>お名前 <span>必須</span></dt>
                 <dd>
@@ -246,7 +246,7 @@
                 <dd>
                   <input
                     type="tel"
-                    name="mail_address"
+                    name="tel"
                     placeholder="000-0000-0000"
                     value=""
                     class="required"
@@ -283,12 +283,9 @@
                 </dd>
               </dl>
               <dl class="form__item">
-                <dt>
-                  キャンペーン
-                  <span>必須</span>
-                </dt>
+                <dt>キャンペーン</dt>
                 <dd>
-                  <select name="hoge">
+                  <select name="campaign">
                     <option value="">キャンペーン内容を選択</option>
                     <option value="option_1">ライセンス取得</option>
                     <option value="option_2">貸切体験ダイビング</option>
@@ -303,28 +300,20 @@
                   <textarea name="contents" class="required"></textarea>
                 </dd>
               </dl>
-              <!-- <div class="form__checkbox">
-                <input
-                  type="checkbox"
-                  name="個人情報の取り扱いについて同意のうえ送信します。"
-                />
-                <span></span>
-              </div> -->
-
               <div class="form__checkbox">
                 <label
                   ><input
                     type="checkbox"
-                    name="hoge"
+                    name="check"
                     value="チェックボックス1"
+                    class="required"
                   /><span
                     >個人情報の取り扱いについて同意のうえ<br
-                      class="u-mobail"
+                      class="u-mobile"
                     />送信します。</span
                   ></label
                 >
               </div>
-
               <div class="form__btn">
                 <div class="button">
                   <input type="submit" value="Send" />
@@ -345,7 +334,7 @@
         </a>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--contact">
       <div class="footer__inner inner">
         <div class="footer__logos">
           <div class="footer__logo logo">

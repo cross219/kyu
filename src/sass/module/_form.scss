@@ -4,7 +4,7 @@
   letter-spacing: 0.05em;
 }
 .form__radio {
-  margin-top: rem(5);
+  margin-top: rem(12);
   display: flex;
   flex-direction: column;
   gap: rem(4);
@@ -19,8 +19,28 @@
   }
 }
 .form dl:not(:first-child) {
-  margin-top: rem(30);
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(38);
+  }
 }
+
+.form__item {
+  padding-bottom: rem(23);
+  border-bottom: 1px dotted $accent;
+  @include mq(md) {
+    padding-bottom: rem(39);
+    display: flex;
+    align-items: top;
+  }
+  // .wpcf7-form-control-wrap {
+  //   display: block;
+  // }
+  // .wpcf7-text {
+  //   display: block;
+  // }
+}
+
 .form__item dt {
   font-size: rem(15);
   line-height: 2;
@@ -31,31 +51,18 @@
   background: #c94800;
   font-size: rem(12);
   font-weight: $normal;
-  margin-left: rem(8);
-  padding: rem(2) rem(16);
+  margin-left: rem(3);
+  padding: rem(2) rem(19);
 }
 .form__item dd {
   max-width: rem(345);
   width: 100%;
   @include mq(md) {
     margin-left: auto;
+    max-width: rem(480);
   }
 }
 
-.form__item {
-  padding-bottom: rem(24);
-  border-bottom: 1px dotted $accent;
-  @include mq(md) {
-    padding-bottom: rem(40);
-    display: flex;
-  }
-  // .wpcf7-form-control-wrap {
-  //   display: block;
-  // }
-  // .wpcf7-text {
-  //   display: block;
-  // }
-}
 
 .form__radio--column {
   @include mq(md) {
@@ -64,10 +71,22 @@
   }
 }
 
+.form__checkbox {
+  text-align: left;
+  margin-top: rem(35);
+  @include mq(md) {
+    text-align: center;
+    margin-top: rem(70);
+  }
+}
+
 .form__btn {
-  margin-top: rem(50);
+  margin-top: rem(25);
   text-align: center;
   // .wpcf7-submit {
   //   text-align: center;
   // }
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }

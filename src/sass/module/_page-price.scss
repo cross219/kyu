@@ -1,11 +1,43 @@
 @use "global" as *;
 
+.page-price {
+
+}
+
+
+
+.page-price-layout {
+
+}
+
+.page-price__inner.inner {
+  max-width: rem(600);
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(782);
+  }
+}
+
+
+.page-price__list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: rem(43);
+  @include mq(md) {
+    gap: rem(77);
+  }
+}
+
+
+
 .page-price__list {
   @include mq(md) {
     display: flex;
+    justify-content: center;
     width: 100%;
   }
 }
+
 
 .page-price__heading {
   background-color: $accent;
@@ -19,7 +51,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 28.57142%;
+    width: 27.17142%;
+    padding: initial;
   }
 }
 
@@ -54,10 +87,10 @@
 .page-price__content {
   display: grid;
   grid-auto-rows: rem(60);
-  grid-template-columns: 1fr 0.30724638fr;
+  grid-template-columns: 1fr 0.44166fr;
   @include mq(md) {
     grid-template-columns: 1fr 0.47647fr;
-    width: 71.42858%;
+    width: 68.42858%;
   }
 }
 

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.archive-voice {
+
+}
+
+.archive-voice-layout {
+
+}
+
+.archive-voice__inner {
+
+}
+
+.archive-voice__pagenavi {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}
+
+
+
