@@ -19,7 +19,7 @@
   @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: none;
-    gap: 13%;
+    gap: 10%;
   }
 }
 
@@ -43,7 +43,7 @@
   position: relative;
   @include mq(md) {
     padding-left: rem(24);
-    white-space: nowrap;
+    // white-space: nowrap;
   }
 }
 
