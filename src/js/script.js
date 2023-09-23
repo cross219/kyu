@@ -181,39 +181,21 @@ jQuery(function ($) {
     }
   });
 
-  // $(document).ready(function () {
-  //   // 必須項目の入力要素を取得
-  //   const requiredInputs = $(".required");
 
-  //   // エラーメッセージを表示する要素を取得
-  //   const errorElement = $(".js-error");
-
-  //   // 入力要素にフォーカスがあたったときの処理を設定
-  //   requiredInputs.on("blur", function () {
-  //     // 未入力の場合、.error クラスを追加
-  //     if ($(this).val().trim() === "") {
-  //       $(this).addClass("error");
-  //       errorElement.css("display", "block"); // エラーメッセージを表示
-
-  //     } else {
-  //       // 入力がある場合、.error クラスを削除
-  //       $(this).removeClass("error");
-  //       errorElement.css("display", "none"); // エラーメッセージを非表示
-
-  //     }
-  //   });
-  // });
   $(document).ready(function () {
     // 必須項目の入力要素を取得
     const requiredInputs = $(".required");
-
+  
     // エラーメッセージを表示する要素を取得
     const errorElement = $(".js-error");
-
+  
+    // 送信ボタンを取得
+    const submitButton = $("#submit-button");
+  
     // フォーム送信時の処理を設定
     $("#form").on("submit", function (e) {
       let hasError = false;
-
+  
       // 必須項目の入力が空かどうかをチェック
       requiredInputs.each(function () {
         if ($(this).val().trim() === "") {
@@ -224,22 +206,22 @@ jQuery(function ($) {
           $(this).removeClass("error");
         }
       });
-
+  
       // エラーがある場合はフォーム送信をキャンセル
       if (hasError) {
         e.preventDefault();
-
+  
         // エラーがある場合、フォームの上部までスクロール
         $("body,html").animate(
           {
             scrollTop: 0,
           },
-          300,
+          500,
           "swing"
         );
       }
     });
-
+  
     // 入力要素にフォーカスがあたったときの処理を設定
     requiredInputs.on("blur", function () {
       // 未入力の場合、.error クラスを追加
@@ -252,34 +234,17 @@ jQuery(function ($) {
         errorElement.css("display", "none"); // エラーメッセージを非表示
       }
     });
+  
+    // .js-submit-checkの変更時に送信ボタンのdisabled属性を制御
+    $(".js-submit-check").on("change", function () {
+      if ($(this).is(":checked")) {
+        $('#form input[type="submit"]').prop("disabled", false); // チェックが入ったらdisabledを解除
+      } else {
+        $('#form input[type="submit"]').prop("disabled", true); // チェックが外れたらdisabledを設定
+      }
+    });
   });
+
+
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // 必須項目の入力要素を取得
-//   const requiredInputs = document.querySelectorAll(".required");
-
-//   // エラーメッセージを表示する要素を取得
-//   const errorElement = document.querySelector(".js-error");
-
-//   // 入力要素にフォーカスがあたったときの処理を設定
-//   requiredInputs.forEach(function (input) {
-//     // input.addEventListener("focus", function () {
-//     //   // フォーカスがあたったとき、.required クラスを追加
-//     //   input.classList.add(".error");
-//     //   errorElement.style.display = "none"; // エラーメッセージを非表示
-//     // });
-
-//     input.addEventListener("blur", function () {
-//       // 未入力の場合、.required クラスを追加
-//       if (input.value.trim() === "") {
-//         input.classList.add("error");
-//         errorElement.style.display = "block"; // エラーメッセージを表示
-//       } else {
-//         // 入力がある場合、.required クラスを削除
-//         input.classList.remove("error");
-//         errorElement.style.display = "none"; // エラーメッセージを非表示
-//       }
-//     });
-//   });
-// });
