@@ -161,25 +161,33 @@ jQuery(function ($) {
     });
   });
 
-  $(".js-faq").on("click", function () {
-    // クリックされたアコーディオン要素を取得
-    var clickedAccordion = $(this);
 
-    // クリックされたアコーディオン以外を閉じる
-    $(".js-faq").not(clickedAccordion).removeClass("close"); // 他のアコーディオンのcloseクラスを削除
-    // $(".faq__content").not(clickedAccordion.next(".faq__content")).slideUp(); // 他のアコーディオンを閉じる
+$(document).ready(function () {
+  $(".faq__content").slideDown(); // すべてのアコーディオンを開く
+  $(".faq__icon").addClass("is-open"); // すべてのアイコンを開いた状態にする
+});
 
-    // クリックされたアコーディオンを開閉する
-    clickedAccordion.find(".faq__icon").toggleClass("is-open");
-    var findElm = clickedAccordion.next(".faq__content");
-    findElm.slideToggle();
+$(".js-faq").on("click", function () {
+  // クリックされたアコーディオン要素を取得
+  var clickedAccordion = $(this);
 
-    if (clickedAccordion.hasClass("close")) {
-      clickedAccordion.removeClass("close");
-    } else {
-      clickedAccordion.addClass("close");
-    }
-  });
+  // クリックされたアコーディオン以外を閉じる
+  // $(".faq__content").not(clickedAccordion.next(".faq__content")).slideUp(); // 他のアコーディオンを閉じる
+
+  // クリックされたアコーディオンを開閉する
+  clickedAccordion.find(".faq__icon").toggleClass("is-open");
+  var findElm = clickedAccordion.next(".faq__content");
+  findElm.slideToggle();
+
+  if (clickedAccordion.hasClass("close")) {
+    clickedAccordion.removeClass("close");
+  } else {
+    clickedAccordion.addClass("close");
+  }
+});
+
+
+  
 
 
   $(document).ready(function () {
