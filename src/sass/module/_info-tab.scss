@@ -36,13 +36,13 @@
 }
 
 .info-tab__button:hover,
-.info-tab__button.is-active {
+.info-tab__button.current {
   color: $white;
   background: $accent;
 }
 
 .info-tab__button:hover .info-tab__icon,
-.info-tab__button.is-active .info-tab__icon {
+.info-tab__button.current .info-tab__icon {
   filter: brightness(298%) contrast(300%) saturate(0%);
 }
 
@@ -75,19 +75,19 @@
 }
 
 .info-tab__wrapper {
-  display: none;
+  // display: none;
   margin-top: rem(14);
 }
 
-.info-tab__wrapper.is-active {
-  display: block;
-  animation: appear 0.9s ease;
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// .info-tab__wrapper.current {
+//   display: block;
+//   animation: appear 0.9s ease;
+// }
+// @keyframes appear {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
