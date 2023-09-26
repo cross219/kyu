@@ -12,7 +12,8 @@
   @include mq(md) {
     position: absolute;
     content: "";
-    background: url(../images/common/lower-bg.png) no-repeat center center / cover;
+    background: url(../images/common/lower-bg.png) no-repeat center center /
+      cover;
     z-index: -10;
     width: 100%;
     top: rem(-80);
@@ -30,9 +31,6 @@
   margin-top: rem(43);
 }
 
-
-
-
 .gallery__items {
   display: grid;
   grid-template-columns: 1fr;
@@ -44,7 +42,7 @@
 }
 
 .gallery__item {
-	cursor: pointer;
+  cursor: pointer;
   aspect-ratio: 345 / 219;
   grid-row: span 1;
   grid-column: span 2;
@@ -55,8 +53,7 @@
   }
 }
 
-
-.gallery__item:nth-child(6n+1){
+.gallery__item:nth-child(6n + 1) {
   aspect-ratio: 345 / 523;
   overflow: hidden;
   @include mq(md) {
@@ -65,11 +62,6 @@
     grid-column: 1;
   }
 }
-
-
-
-
-
 
 .gallery__item:nth-child(6n) {
   aspect-ratio: 345 / 523;
@@ -87,9 +79,8 @@
   object-fit: cover;
 }
 
-
 /*モーダル本体の指定 + モーダル外側の背景の指定*/
-.gallery__modal{
+.gallery__modal {
   background: rgba(32, 32, 32, 0.8);
   cursor: pointer;
   display: none;
@@ -102,13 +93,13 @@
   z-index: 100;
 }
 
-.gallery__modal.active{
-	opacity: 1;
-	visibility: visible;
+.gallery__modal.active {
+  opacity: 1;
+  visibility: visible;
   display: block;
 }
 
-.gallery__modal img{
+.gallery__modal img {
   height: 75%;
   left: 50%;
   object-fit: contain;
@@ -118,11 +109,6 @@
   width: 100%;
   @include mq(md) {
     aspect-ratio: 920/586;
-    width: 90%;
+    width: 50%;
   }
 }
-
-
-
-
-
