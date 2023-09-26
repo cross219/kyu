@@ -4,17 +4,14 @@
 }
 
 .page-contact__inner {
-
+    max-width: rem(600);
+    width: 100%;
+    @include mq(md) {
+      max-width: rem(750);
+    }
 }
 
-.page-contact__content {
-  margin: 0 auto;
-  max-width: rem(375);
-  width: 100%;
-  @include mq(md) {
-    max-width: rem(700);
-  }
-}
+
 
 .page-contact__error {
   color: #c94800;
