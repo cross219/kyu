@@ -54,16 +54,13 @@ jQuery(function ($) {
     loop: true, // ループ
     spaceBetween: 24, // スライド間の距離
     slidesPerView: "auto", // 一度に表示する枚数
-    // loopAdditionalSlides: 2,
     paginationClickable: true,
-    // width: 280,
-    speed: 1000, // ループの時間
+    speed: 1000, 
     grabCursor: true,
-    allowTouchMove: true, // スワイプ無効
-    centeredSlides: false, // アクティブなスライドを中央にする
+    allowTouchMove: true, 
+    centeredSlides: false, 
     autoplay: {
-      //自動再生
-      delay: 3000, // 途切れなくループ
+      delay: 3000,
       disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
     },
     navigation: {
@@ -72,29 +69,18 @@ jQuery(function ($) {
     },
     breakpoints: {
       768: {
-        // slidesPerView: 3.5,
         spaceBetween: 40, // スライド間の距離
-        // width: 1265.5,
       },
-      // 1920: {
-      //   slidesPerView: 5,
-      //   spaceBetween: 40, // スライド間の距離
-      //   width: 1825,
-      // },
     },
   });
   //  ヘッダークラス名付与
-  // let header = $(".header");
-  // let headerHeight = $(".header").height();
   let height = $(".fv ,.sub-mv").height();
   var topBtn = $(".to-top");
   // ボタンの表示設定
   $(window).scroll(function () {
     if ($(this).scrollTop() > height) {
-      // 指定px以上のスクロールでボタンを表示
       topBtn.fadeIn();
     } else {
-      // 画面が指定pxより上ならボタンを非表示
       topBtn.fadeOut();
     }
   });

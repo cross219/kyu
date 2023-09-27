@@ -10,7 +10,6 @@
   border: 1px solid $accent;
   padding: rem(24);
   @include mq(md) {
-    margin-top: rem(10);
     padding: rem(22) rem(24);
     display: flex;
     gap: rem(48);
